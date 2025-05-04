@@ -1,0 +1,8 @@
+// Padding y margin
+@each $prefix, $property in $spacings {
+    @for $i from 0 through 12 {
+        .#{$prefix}-#{$i} {
+            #{$property}: $i * 0.25rem;
+        }
+    }
+}

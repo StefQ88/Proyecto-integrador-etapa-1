@@ -1,0 +1,107 @@
+// Breakpoints (para media queries)
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// Grid Widths (para containers máximos)
+$grid-width: (
+    xs: 360px, 
+    sm: 540px, 
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px 
+);
+
+// ==============================
+// PALETA DE COLORES
+// ==============================
+
+// 🔵 AZUL - Color de marca principal (confianza y profesionalismo)
+$color-blue: #1E40AF; // Header, botones principales, navegación
+$color-blue-light: #93C5FD; // Hover suave, fondo de tarjetas informativas
+$color-blue-strong: #1D4ED8; // Hover fuerte, íconos activos, links
+
+// 🟠 NARANJA - Secundario alegre (acción, entusiasmo)
+$color-orange: #F97316; // Botones secundarios, destacados
+$color-orange-light: #FED7AA; // Fondos suaves, etiquetas infantiles
+$color-orange-strong: #EA580C; // Hover botón naranja, énfasis
+
+// 🟡 AMARILLO - Color acento (ofertas, edad, estrellas)
+$color-yellow: #FACC15; // Precios, calificaciones, badges “Nuevo”
+$color-yellow-light: #FEF9C3; // Fondo promoción, etiquetas suaves
+$color-yellow-strong: #EAB308; // Hover fuerte o ícono llamativo
+
+// 🔴 ROJO - Acción fuerte (urgencia, promociones)
+$color-red: #EF4444; // Botón “Comprar”, alertas visuales
+$color-red-light: #FECACA; // Fondo error suave, hover amigable
+$color-red-strong: #DC2626; // Hover de botón rojo, íconos de advertencia
+
+// ✅ VERDE - Confirmación o positivo (en stock, edad)
+$color-success: #22C55E; // Confirmaciones, stock disponible, validación
+$color-success-light: #DCFCE7; // Fondo verde suave para éxito o resaltado
+
+// ⚪ NEUTROS
+$color-white: #FFFFFF; // Fondo general
+$color-gray-light: #F3F4F6; // Fondo alternativo, tarjetas
+$color-gray-medium: #D1D5DB; // Bordes, líneas, separadores
+$color-gray-dark: #111827; // Texto principal, íconos oscuros
+
+$success-color: #2a892a;
+$danger-color: #a71010;
+$warning-color: #c1aa17;
+
+
+// ==============================
+// FUENTES
+// ==============================
+$font-primary: "Inter", sans-serif;
+$font-secondary: "Nunito", sans-serif;
+$font-tertiary: "Rubik", sans-serif;
+
+
+
+// ==============================
+// LAYOUT
+// ==============================
+$body-bg-color: $color-white;
+$header-bg-color: $color-blue;
+
+$header-height: 19rem;
+
+// ==============================
+// GRID
+// ==============================
+$grid-columns: 12;
+
+
+
+// ==============================
+// CARD
+// ==============================
+$card-min-width: 280px;
+$grid-gap: 2rem;
+
+// ==============================
+// SPACINGS
+// ==============================
+$spacings: (
+    m: margin,
+    mt: margin-top,
+    mb: margin-bottom,
+    ml: margin-left,
+    mr: margin-right,
+    p: padding,
+    pt: padding-top,
+    pb: padding-bottom,
+    pl: padding-left,
+    pr: padding-right,
+);
+
+
+

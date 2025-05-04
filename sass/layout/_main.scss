@@ -1,0 +1,28 @@
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
+        max-width: map-get($grid-width, xl);
+    }
+}
+
+.main__container {
+    @extend .container;
+}
+
+.main__grid {
+    @extend .grid;
+}
+
+.main__title {
+    font-size: 2rem;
+    color: $color-blue;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: $font-secondary;
+}

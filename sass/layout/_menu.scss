@@ -1,0 +1,50 @@
+.menu__container {
+    display: none;
+
+    // Modificador BEM que activa la visibilidad
+    &-visible {
+        display: block;
+        position: fixed;
+        top: 0; // Desde el borde superior
+        left: 0;
+        z-index: 10; //encima del contenido
+        width: 20rem;
+        overflow-y: auto;
+
+
+        background-color: $color-blue-light;
+
+
+
+        .menu__navigation {
+            padding: 1.5rem 1rem;
+        }
+
+        .menu__list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu__item a {
+            color: $color-white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 400;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+
+        @media screen and (min-width: map-get($grid-breakpoints, md)) {
+            display: none;
+        }
+
+    }
+
+
+}

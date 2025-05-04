@@ -1,0 +1,141 @@
+.footer {
+  background-color: $color-blue;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; //las columnas bajan si no entran
+    align-items: stretch;// alinea todos los elementos a la misma altura
+    
+    padding: 1rem;
+    box-sizing: border-box;
+  
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    flex-grow: 1; //se estira verticalmente
+
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    align-items: flex-start; // alinea hijos a la izquierda
+    color: $color-white;
+
+  }
+
+  &__col {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    // A partir de "sm", dos columnas por fila
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+      flex: 0 0 50%;
+      max-width: 50%; // no excede el 50%
+    }
+
+    // A partir de "lg", cuatro columnas por fila
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+      flex: 0 0 25%; //ocupa el 25% del contenedor
+      max-width: 25%;
+
+    }
+
+    // Línea separadora entre columnas (solo cuando hay 4 en fila)
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+      &:not(:last-child)::after {
+        content: ""; //crea el pseudo-elemento
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        width: 1px;
+        background-color: $color-gray-medium;
+        transform: translate(0.5rem);
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, $color-orange, $color-yellow);
+        background-clip: text;  
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    opacity: 0.75;
+
+    margin-bottom: 0.5rem;
+  }
+
+  &__item a {
+    color: $color-white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+
+  &__content span {
+    color: $color-white;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-orange;
+      cursor: default; // o pointer si querés que parezca clickeable
+    }
+  }
+
+
+
+
+  &__list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+    opacity: 0.75;
+
+  }
+
+
+
+  &__bottom {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: $color-blue;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    gap: 1rem;
+
+    text-transform: uppercase;
+    color: $color-gray-medium;
+    font-size: 0.7rem;
+    opacity: 0.5;
+  }
+}

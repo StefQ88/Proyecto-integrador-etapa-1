@@ -1,0 +1,36 @@
+.container {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    @include create-container-width();
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    
+    @media screen and (max-width: map-get($grid-breakpoints, sm) ) {
+        column-gap: 0.5rem;
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        grid-column: span #{$i};
+        grid-template-columns: 1fr;
+    }
+}
+
+@each $bp, $w in $grid-breakpoints {
+    @for $i from 1 through $grid-columns {
+        .col-#{$bp}-#{$i} {
+            @media screen and (min-width: $w) {
+                grid-column: span #{$i};
+            }
+        }
+    }
+}
+

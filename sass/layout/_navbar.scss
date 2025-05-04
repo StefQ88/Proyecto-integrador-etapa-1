@@ -1,0 +1,65 @@
+
+.navbar {
+
+    margin-left: 2rem;
+
+    // Lista de enlaces de navegacion
+    &__list {
+        display: flex;
+        gap: 1.2rem;
+        list-style: none;
+
+        // Oculta la lista en pantallas pequeñas (md o menores)
+        @media screen and (max-width: map-get($grid-breakpoints, md)) {
+            display: none;
+        }
+
+    }
+
+    // Enlaces individuales
+    &__link {
+        color: $color-white;
+        font-size: 1rem;
+        font-weight: 300;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-orange;
+        }
+    }
+
+
+    &__menu-button {
+
+        display: none; //oculto por defecto
+
+        // Solo visible en pantallas pequeñas
+        @media screen and (max-width: map-get($grid-breakpoints, md)) {
+            display: inline-flex;
+        }
+
+        background: none;
+        color: $color-white;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: relative;
+        border-radius: 1rem;
+        
+        transition: border 0.2s ease;
+        
+        &:hover {
+            outline: 2px solid $color-orange; 
+        }
+        
+        
+    }
+
+
+
+
+
+}
+

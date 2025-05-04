@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetería Cósmica</title>
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+
+            <!-- GRUPO IZQUIERDO -->
+            <div class="header__left">
+
+                <!-- Logo -->
+                <div class="header__logo">
+                    <a href="index.html" class="header__logo-link">
+                        <img src="./images/4 may 2025, 11_47_42.png" alt="Logo Juguetería Cósmica" />
+                    </a>
+                    <div class="header__text">
+                        <h1 class="header__title">Juguetería Cósmica</h1>
+                        <span class="header__slogan">Descubrí tu universo de juegos</span>
+                    </div>
+                </div>
+
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
+                        <li class="navbar__item"><a href="#" class="navbar__link">Contacto</a></li>
+                        <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- GRUPO DERECHO -->
+            <div class="header__right">
+
+                <button class="navbar__menu-button" onclick="handleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <a href="#" class="btn btn__header">Consúltanos</a>
+
+                <!-- Fila nueva debajo: Buscador -->
+                <div class="header__search">
+                    <form class=" header__search__form" action="#" method="get">
+                        <input type="text" class="header__search__input" placeholder="Buscar productos ...">
+                        <button type="submit" class="header__search__button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <aside id="mobile_menu" class="menu__container">
+        <nav class="menu__navigation">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#">Nosotros</a></li>
+                <li class="menu__item"><a href="#">Contacto</a></li>
+                <li class="menu__item"><a href="#">Alta productos</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <div class="container main__container">
+            <h2 class="main__title">Nuestros productos</h2>
+
+            <!-- Grid de cards -->
+            <section class="main__grid grid" aria-label="Listado de productos">
+                <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="card__image-container">
+                        <img src="./images/prueba.png" alt="prueba" class="card__image" />
+                    </div>
+
+                    <div class="card__content">
+                        <div class="card__header">
+                            <h3 class="card__title">Metegol</h3>
+                            <span class="card__price">$U 1.290</span>
+                        </div>
+                        <hr class="card__divider" />
+                        <p class="card__text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="btn btn__card">Comprar</a>
+                    </div>
+                </article>
+
+                <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="card__image-container">
+                        <img src="./images/prueba.png" alt="prueba" class="card__image" />
+                    </div>
+
+                    <div class="card__content">
+                        <div class="card__header">
+                            <h3 class="card__title">Metegol</h3>
+                            <span class="card__price">$U 1.290</span>
+                        </div>
+                        <hr class="card__divider" />
+                        <p class="card__text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="btn btn__card">Comprar</a>
+                    </div>
+                </article>
+
+                <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="card__image-container">
+                        <img src="./images/prueba.png" alt="prueba" class="card__image" />
+                    </div>
+
+                    <div class="card__content">
+                        <div class="card__header">
+                            <h3 class="card__title">Metegol</h3>
+                            <span class="card__price">$U 1.290</span>
+                        </div>
+                        <hr class="card__divider" />
+                        <p class="card__text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="btn btn__card">Comprar</a>
+                    </div>
+                </article>
+
+                <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="card__image-container">
+                        <img src="./images/prueba.png" alt="prueba" class="card__image" />
+                    </div>
+
+                    <div class="card__content">
+                        <div class="card__header">
+                            <h3 class="card__title">Metegol</h3>
+                            <span class="card__price">$U 1.290</span>
+                        </div>
+                        <hr class="card__divider" />
+                        <p class="card__text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="btn btn__card">Comprar</a>
+                    </div>
+                </article>
+
+                <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="card__image-container">
+                        <img src="./images/prueba.png" alt="prueba" class="card__image" />
+                    </div>
+
+                    <div class="card__content">
+                        <div class="card__header">
+                            <h3 class="card__title">Metegol</h3>
+                            <span class="card__price">$U 1.290</span>
+                        </div>
+                        <hr class="card__divider" />
+                        <p class="card__text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="btn btn__card">Comprar</a>
+                    </div>
+                </article>
+
+
+            </section>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container footer__container">
+
+            <!-- Sección de información -->
+
+            <section class="footer__col">
+                <div class="footer__content">
+                    <h4 class="footer__title">Nuestra empresa</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Acerca de Nosotros</a></li>
+                        <li class="footer__item"><a href="#">Dónde Estamos</a></li>
+                        <li class="footer__item"><a href="#">Contacto</a></li>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section class="footer__col">
+                <div class="footer__content">
+                    <h4 class="footer__title">Ayuda</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Preguntas frecuentes</a></li>
+                        <li class="footer__item"><a href="#">Términos y condiciones</a></li>
+                        <li class="footer__item"><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="footer__col">
+                <div class="footer__content">
+                    <h4 class="footer__title">Medios de pago</h4>
+                    <span class="footer__list">Tarjetas de débito y crédito</span>
+                </div>
+            </section>
+
+            <section class="footer__col">
+                <div class="footer__content">
+                    <h4 class="footer__title">Contacto</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Email</a></li>
+                        <li class="footer__item"><a href="#">Teléfono</a></li>
+                        <li class="footer__item"><a href="#">Redes sociales</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer__bottom">
+            <div class="container footer__copyright">
+                <span>Copyright 2025 ©</span>
+                <span>Juguetería Cósmica</span>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+.header {
+    background-color: $color-blue;
+    border-top: 7px solid $color-orange;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    position: relative;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        gap: 0.5rem;
+        padding: 1rem;
+
+        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex: 1 1 auto; // crece si hay espacio
+
+        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0; //no se encoje
+        // max-width: 320px;
+        width: 100%; //solo ocupa lo necesario
+        gap: 0.5rem;
+
+        @media screen and (min-width: map-get($grid-breakpoints, md)) {
+            align-items: flex-end;
+            width: auto;
+            margin-left: auto;
+        }
+
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+
+        img {
+            height: 120px;
+            width: auto; 
+            object-fit: contain; 
+        }
+
+        @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+            flex-direction: row; // en sm+, alineacion horizontal
+            align-items: center;
+            gap: 0.4rem;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @media screen and (min-width: map-get($grid-breakpoints, md)) {
+            align-items: flex-start; 
+            text-align: left;
+        }
+    }
+
+    &__title {
+        font-family: $font-tertiary;
+        font-size: 2.1rem;
+        font-weight: 800;
+        margin-top: 0;
+        background: linear-gradient(90deg, $color-orange, $color-yellow);
+        background-clip: text;  
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+
+        @media screen and (max-width:map-get($grid-breakpoints, sm)){
+            font-size: 1.6rem; //ajusto texto para pantallas chicas
+            max-width: 90vw;
+        }
+    }
+
+    &__slogan {
+        margin-top: 0.3rem;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: $color-white;
+        opacity: 0.75;
+
+        @media screen and (max-width:map-get($grid-breakpoints, sm)){
+            font-size: 0.8rem;
+            max-width: 80vw;
+        }
+
+    }
+}
