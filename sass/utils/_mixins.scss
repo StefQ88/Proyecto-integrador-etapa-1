@@ -1,8 +1,18 @@
-
 @mixin create-container-width () {
     @each $bp, $w in $grid-breakpoints {
         @media (min-width: $w) {
             max-width: map-get($grid-width, $bp);
         }
+    }
+}
+
+
+/// Oculta un elemento en pantallas menores al breakpoint 
+/// @param {string} $breakpoint - nombre del breakpoint ('sm', 'md', etc)
+/// Usa `map-get($grid-breakpoints, $breakpoint)` para obtener el valor.
+
+@mixin hide-below($breakpoint) {
+    @media screen and (max-width: calc(#{map-get($grid-breakpoints, $breakpoint)} - 1px)) {
+        display: none !important;
     }
 }

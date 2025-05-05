@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=360, initial-scale=1">
     <title>Juguetería Cósmica</title>
     <link rel="stylesheet" href="./sass/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -73,9 +73,42 @@
 
     <main class="main">
         <div class="container main__container">
-            <h2 class="main__title">Nuestros productos</h2>
 
-            <!-- Grid de cards -->
+
+            <section class="grid mb-8 banner-cards">
+
+                <!-- Banner - Card izquierda -->
+                <div class="col-12 col-sm-6 col-md-4 banner-card">
+                    <div class="banner-card__image">
+                        <img src="images/imagen1.jpg" alt="" class="banner-card__img">
+                        <div class="banner-card__overlay">
+                            <p>Donde empieza la aventura</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Banner - Texto central -->
+                <div class="col-12 col-sm-6 col-md-4 banner-card banner-card--center">
+                    <h2 class="banner-card__title">¡Bienvenidos!</h2>
+                    <p class="banner-card__intro">Un espacio para crear, imaginar y sonreír</p>
+                    <p class="banner-card__select">Elegí tu favorito</p>
+                </div>
+                
+                <!-- Banner - Imagen derecha -->
+                <div class="col-12 col-sm-6 col-md-4 banner-card banner-card--right hide-below-md ">
+                    <div class="banner-card__image">
+                        <img src="images/foto2.jpg" alt="" class="banner-card__img">
+                        <div class="banner-card__overlay">
+                            <p>Colores que inspiran</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="star-line">✦ ✦ ✦ ✦ ✦</div>
+
+            <!-- GRID DE PRODUCTOS -->
             <section class="main__grid grid" aria-label="Listado de productos">
                 <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
                     <div class="card__image-container">

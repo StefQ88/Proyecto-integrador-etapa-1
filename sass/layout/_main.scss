@@ -4,9 +4,10 @@
     margin: 0 auto;
     padding: 1rem;
     box-sizing: border-box;
+    min-width: 360px;
 
     @media screen and (min-width: map-get($grid-breakpoints, md)) {
-        max-width: map-get($grid-width, xl);
+        max-width: map-get($grid-width, xxl);
     }
 }
 

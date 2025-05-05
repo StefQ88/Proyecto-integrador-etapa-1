@@ -18,6 +18,10 @@ $grid-width: (
     xxl: 1320px 
 );
 
+// Breakpoint para ocultar elementos en pantallas chicas (menores a md = 768px)
+
+$hide-sm-max: 768px;
+
 // ==============================
 // PALETA DE COLORES
 // ==============================
@@ -72,7 +76,7 @@ $font-tertiary: "Rubik", sans-serif;
 $body-bg-color: $color-white;
 $header-bg-color: $color-blue;
 
-$header-height: 19rem;
+// $header-height: 19rem;
 
 // ==============================
 // GRID

@@ -1,0 +1,9 @@
+
+.container {
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    box-sizing: border-box; //incluye padding en el width
+    @include create-container-width();
+}
