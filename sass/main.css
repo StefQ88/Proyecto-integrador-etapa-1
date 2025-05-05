@@ -1423,12 +1423,8 @@ DEBUG: Activar para visualizar los limites de todos los elementos
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #F97316, #FACC15);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  opacity: 0.75;
+  color: #F97316;
+  opacity: 0.85;
   margin-bottom: 0.5rem;
 }
 .footer__item a {

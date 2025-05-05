@@ -69,13 +69,8 @@
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(90deg, $color-orange, $color-yellow);
-        background-clip: text;  
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-    opacity: 0.75;
-
+    color: $color-orange;
+    opacity: 0.85;
     margin-bottom: 0.5rem;
   }
 
@@ -96,7 +91,7 @@
 
     &:hover {
       color: $color-orange;
-      cursor: default; // o pointer si querés que parezca clickeable
+      cursor: default; 
     }
   }
 
