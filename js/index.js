@@ -32,7 +32,7 @@ const handleMenu = () => {
 
         menu.style.height = `${windowHeight - headerHeight}px` //altura dinamica
 
-        document.body.style.overflow = "hidden" //evito scroll
+        document.documentElement.style.overflow = "hidden";
 
     } else {
         menu.classList.remove("menu__container-visible") 
@@ -40,7 +40,7 @@ const handleMenu = () => {
         menu.style.top = ""
         menu.style.height = ""
 
-        document.body.style.overflow = "auto" // permitimos scroll
+        document.documentElement.style.overflow = "";
     }
     showMenu = !showMenu
 
