@@ -642,66 +642,51 @@ DEBUG: Activar para visualizar los limites de todos los elementos
 }
 .header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
+  row-gap: 1rem;
+  gap: 1rem;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .header__container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    position: relative;
   }
 }
 .header__left {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex: 1 1 auto;
+  gap: 1rem;
+  justify-content: flex-start;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .header__left {
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
-}
-.header__right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 100%;
-  gap: 0.5rem;
-}
-@media screen and (min-width: 768px) {
-  .header__right {
-    align-items: flex-end;
-    width: auto;
-    margin-left: auto;
+    justify-content: start;
   }
 }
 .header__logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 .header__logo img {
-  height: 120px;
+  height: 80px;
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  display: block;
 }
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 768px) {
   .header__logo {
-    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 0.4rem;
+    text-align: center;
   }
 }
 .header__text {
@@ -709,6 +694,8 @@ DEBUG: Activar para visualizar los limites de todos los elementos
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex: 1;
+  min-width: 0;
 }
 @media screen and (min-width: 768px) {
   .header__text {
@@ -740,10 +727,61 @@ DEBUG: Activar para visualizar los limites de todos los elementos
   color: #FFFFFF;
   opacity: 0.75;
 }
+.header__center {
+  flex: 2;
+  justify-content: center;
+}
 @media screen and (max-width: 576px) {
-  .header__slogan {
-    font-size: 0.8rem;
-    max-width: 80vw;
+  .header__center {
+    display: none;
+  }
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 300px;
+  min-width: 0;
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .header__right {
+    justify-self: end;
+  }
+}
+.header__icon {
+  background: none;
+  border: 2px solid transparent;
+  padding: 0.5rem;
+  border-radius: 30%;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.header__icon:hover {
+  border-color: #F97316;
+}
+.header__menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__menu {
+    display: inline-flex;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+}
+.header__search-button {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__search-button {
+    display: inline-flex;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
   }
 }
 
@@ -1242,47 +1280,32 @@ DEBUG: Activar para visualizar los limites de todos los elementos
 }
 
 .navbar {
-  margin-left: 2rem;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: block;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
 }
 .navbar__list {
   display: flex;
+  justify-content: flex-end;
   gap: 1.2rem;
+  flex-wrap: nowrap;
   list-style: none;
-}
-@media screen and (max-width: 768px) {
-  .navbar__list {
-    display: none;
-  }
+  padding: 0;
+  margin: 0;
 }
 .navbar__link {
-  color: #FFFFFF;
-  font-size: 1rem;
-  font-weight: 300;
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: #FFFFFF;
+  font-weight: 600;
+  white-space: nowrap;
 }
 .navbar__link:hover {
   color: #F97316;
-}
-.navbar__menu-button {
-  display: none;
-  background: none;
-  color: #FFFFFF;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  position: relative;
-  border-radius: 1rem;
-  transition: border 0.2s ease;
-}
-@media screen and (max-width: 768px) {
-  .navbar__menu-button {
-    display: inline-flex;
-  }
-}
-.navbar__menu-button:hover {
-  outline: 2px solid #F97316;
 }
 
 .main {
@@ -1374,7 +1397,7 @@ DEBUG: Activar para visualizar los limites de todos los elementos
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: stretch;
-  padding: 1rem;
+  padding: 0.5rem;
   box-sizing: border-box;
 }
 .footer__content {
@@ -1471,33 +1494,40 @@ DEBUG: Activar para visualizar los limites de todos los elementos
   opacity: 0.5;
 }
 
-.header__search {
-  width: 100%;
-}
-.header__search__form {
-  display: flex;
-  position: relative;
-  max-width: 100%;
-  width: 100%;
-}
-@media screen and (min-width: 576px) {
-  .header__search__form {
-    width: 100%;
+@media screen and (max-width: 576px) {
+  .search {
+    display: none;
+  }
+  .search.visible {
+    display: block;
+    padding-top: 0.5rem;
   }
 }
-.header__search__input {
-  flex: 1;
-  padding: 0.5rem 2.5rem 0.5rem 1rem;
+.search__form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 auto;
   border-radius: 2rem;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .search__form {
+    display: none;
+  }
+}
+.search__input {
+  flex: 1 1 auto;
+  padding: 0.5rem 1rem;
   border: none;
   outline: none;
   font-size: 1rem;
   color: #111827;
-  background-color: #FFFFFF;
-  width: 100%;
-  max-width: 100%;
+  min-width: 0;
 }
-.header__search__button {
+.search__button {
   position: absolute;
   top: 50%;
   right: 1rem;
@@ -1507,6 +1537,12 @@ DEBUG: Activar para visualizar los limites de todos los elementos
   color: #F97316;
   font-size: 1rem;
   cursor: pointer;
+  display: inline-flex;
+}
+@media screen and (max-width: 576px) {
+  .search__button {
+    display: none;
+  }
 }
 
 .btn {
@@ -1520,16 +1556,6 @@ DEBUG: Activar para visualizar los limites de todos los elementos
   text-align: center;
   justify-content: center;
   align-items: center;
-}
-.btn__header {
-  background-color: #F97316;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-}
-.btn__header:hover {
-  background-color: #EA580C;
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
 }
 .btn__card {
   background-color: #EF4444;

@@ -13,10 +13,15 @@
     <header class="header">
         <div class="container header__container">
 
-            <!-- GRUPO IZQUIERDO -->
+            <!-- IZQUIERDA -->
             <div class="header__left">
 
-                <!-- Logo -->
+                <!-- Botón menú hamburguesa (izquierda) -->
+                <button class="header__icon header__menu" onclick="handleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Logo (centrado) -->
                 <div class="header__logo">
                     <a href="index.html" class="header__logo-link">
                         <img src="./images/4 may 2025, 11_47_42.png" alt="Logo Juguetería Cósmica" />
@@ -26,31 +31,29 @@
                         <span class="header__slogan">Descubrí tu universo de juegos</span>
                     </div>
                 </div>
-
-                <!-- Navbar -->
-                <nav class="navbar">
-                    <ul class="navbar__list">
-                        <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
-                        <li class="navbar__item"><a href="#" class="navbar__link">Contacto</a></li>
-                        <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
-                    </ul>
-                </nav>
             </div>
 
-            <!-- GRUPO DERECHO -->
+            <!-- CENTRO -->
+            <!-- Menú de navegación (visible en desktop) -->
+            <nav class="navbar header__center">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Contacto</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
+                </ul>
+            </nav>
+            
+            <!-- DERECHA -->
             <div class="header__right">
-
-                <button class="navbar__menu-button" onclick="handleMenu()">
-                    <i class="fa-solid fa-bars"></i>
+                <button class="header__icon header__search-button" onclick="toggleSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
 
-                <a href="#" class="btn btn__header">Consúltanos</a>
-
-                <!-- Fila nueva debajo: Buscador -->
-                <div class="header__search">
-                    <form class=" header__search__form" action="#" method="get">
-                        <input type="text" class="header__search__input" placeholder="Buscar productos ...">
-                        <button type="submit" class="header__search__button">
+                <!-- Buscador: visible en desktop y oculto en mobile-->
+                <div class="search" id="searchWrapper">
+                    <form class="search__form">
+                        <input type="text" class="search__input" placeholder="Buscar productos ...">
+                        <button type="submit" class="search__button">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
@@ -87,14 +90,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Banner - Texto central -->
                 <div class="col-12 col-sm-6 col-md-4 banner-card banner-card--center">
                     <h2 class="banner-card__title">¡Bienvenidos!</h2>
                     <p class="banner-card__intro">Un espacio para crear, imaginar y sonreír</p>
                     <p class="banner-card__select">Elegí tu favorito</p>
                 </div>
-                
+
                 <!-- Banner - Imagen derecha -->
                 <div class="col-12 col-sm-6 col-md-4 banner-card banner-card--right hide-below-md ">
                     <div class="banner-card__image">

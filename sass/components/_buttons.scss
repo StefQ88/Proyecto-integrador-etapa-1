@@ -13,18 +13,6 @@
     justify-content: center;
     align-items: center;
 
-    &__header {
-        background-color: $color-orange;
-        color: $color-white;
-        border: 1px solid $color-white;
-
-
-        &:hover {
-            background-color: $color-orange-strong;
-            border: 1px solid $color-white;
-            color: $color-white;
-        }
-    }
 
     &__card {
         background-color: $color-red;
