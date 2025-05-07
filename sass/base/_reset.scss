@@ -1,15 +1,19 @@
 
+
 body {
     background-color: $body-bg-color;
     margin: 0;
 }
 
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -22,15 +26,16 @@ a {
     text-decoration: none;
 }
 
-h1, h3 {
+h1,
+h3 {
     margin: 0;
 }
 
 
 /*
-DEBUG: Activar para visualizar los limites de todos los elementos
-
+DEBUG: para visualizar los limites de todos los elementos
 * {
   outline: 1px solid red;
 }
+
 */

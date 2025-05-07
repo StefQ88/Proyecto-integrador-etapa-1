@@ -1,10 +1,14 @@
 .header {
     background-color: $color-blue;
     border-top: 7px solid $color-orange;
-    width: 100%;
-    z-index: 2;
-    top: 0; //pegado arriba
-    position: relative;
+
+    // min-height: 7.5rem; // Altura base adaptable
+    padding-block: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; 
+    z-index: 200;
 
     &__container {
         display: flex;
