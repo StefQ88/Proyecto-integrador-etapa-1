@@ -1,41 +1,53 @@
-
-
-body {
-    background-color: $body-bg-color;
-    margin: 0;
-}
-
-
-html,
-body {
-    overflow-x: hidden;
-}
+/* ======= RESET BASE ======= */
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-main {
-    min-height: calc(100vh - (4.5rem + 2rem + 64px));
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $font-tertiary;
+    line-height: 1.5;
+
+
 }
 
 a {
-    color: unset;
     text-decoration: none;
+    color: inherit;
 }
 
 h1,
-h3 {
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    line-height: 1.2;
     margin: 0;
 }
 
-
-/*
-DEBUG: para visualizar los limites de todos los elementos
-* {
-  outline: 1px solid red;
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-*/
+main {
+    flex: 1;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}

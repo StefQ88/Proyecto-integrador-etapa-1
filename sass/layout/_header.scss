@@ -2,26 +2,27 @@
     background-color: $color-blue;
     border-top: 7px solid $color-orange;
 
-    // min-height: 7.5rem; // Altura base adaptable
-    padding-block: 0.5rem;
+    padding-block: 0.5rem; //espacio vertical
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative; 
-    z-index: 200;
+    position: relative;
+    z-index: 2;
 
     &__container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: space-between; //asi distribuye los grupos
+
+        flex-wrap: nowrap; // en linea horizontal
+        column-gap: 2rem;
         padding: 0.5rem;
-        row-gap: 1rem;
-        gap: 1rem;
 
         // Layout en pantallas móviles y tablets (menor a md)
         @media screen and (max-width: map-get($grid-breakpoints, md)) {
             flex-direction: row;
+            flex-wrap: wrap; // en mobile pueden bajar
+            row-gap: 1.2rem;
             justify-content: center;
             text-align: center;
             position: relative; // para ubicar los botones absolutos
@@ -35,9 +36,6 @@
         gap: 1rem;
         justify-content: flex-start;
 
-        @media screen and (max-width: map-get($grid-breakpoints, md)) {
-            justify-content: start;
-        }
     }
 
     &__logo {
@@ -56,7 +54,7 @@
         // Centrado en móvil
         @media screen and (max-width: map-get($grid-breakpoints, md)) {
             justify-content: center;
-            flex-direction: column;
+            flex-direction: column; //en mobile apila logo y texto
             align-items: center;
             text-align: center;
         }
@@ -68,7 +66,7 @@
         align-items: center;
         text-align: center;
         flex: 1;
-        min-width: 0;
+        min-width: 0; 
 
         @media screen and (min-width: map-get($grid-breakpoints, md)) {
             align-items: flex-start;
@@ -80,7 +78,9 @@
         font-family: $font-tertiary;
         font-size: 2.1rem;
         font-weight: 800;
-        margin-top: 0;
+        margin-top: 0; //elimino separacion arriba
+
+
         background: linear-gradient(90deg, $color-orange, $color-yellow);
         background-clip: text;
         -webkit-background-clip: text;
@@ -104,8 +104,11 @@
 
     // Grupo CENTRO: navegación
     &__center {
-        flex: 2;
+        display: flex;
         justify-content: center;
+        align-items: center;
+
+        flex: 0 0 auto; 
 
         @media screen and (max-width: map-get($grid-breakpoints, sm)) {
             display: none; // oculto en mobile
@@ -117,7 +120,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        flex: 1 1 300px;
+        flex: 0 0 auto;
         min-width: 0;
         gap: 1rem;
 

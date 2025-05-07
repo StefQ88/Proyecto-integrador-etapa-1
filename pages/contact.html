@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, initial-scale=1">
+    <title>Juguetería Cósmica</title>
+    <link rel="stylesheet" href="../sass/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+
+            <!-- IZQUIERDA -->
+            <div class="header__left">
+
+                <!-- Botón menú hamburguesa (izquierda) -->
+                <button class="header__icon header__menu" onclick="handleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Logo (centrado) -->
+                <div class="header__logo">
+                    <a href="" class="header__logo-link">
+                        <img src="../images/logo.png" alt="Logo Juguetería Cósmica" />
+                    </a>
+                    <div class="header__text">
+                        <h1 class="header__title">Juguetería Cósmica</h1>
+                        <span class="header__slogan">Descubrí tu universo de juegos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENTRO -->
+            <!-- Menú de navegación (visible en desktop) -->
+            <nav class="navbar header__center">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
+                    <li class="navbar__item"><a href="pages/contact.html" class="navbar__link">Contacto</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
+                </ul>
+            </nav>
+
+            <!-- DERECHA -->
+            <div class="header__right">
+                <button class="header__icon header__search-button" onclick="toggleSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <!-- Buscador: visible en desktop y oculto en mobile-->
+                <div class="search" id="searchWrapper">
+                    <form class="search__form">
+                        <input type="text" class="search__input" placeholder="Buscar productos ...">
+                        <button type="submit" class="search__button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <aside id="mobile_menu" class="menu__container">
+        <h2 class="menu__title">Menú</h2>
+        <nav class="menu__navigation">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#">Nosotros</a></li>
+                <li class="menu__item"><a href="#">Contacto</a></li>
+                <li class="menu__item"><a href="#">Alta productos</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <h2>Contactanos</h2>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container footer__container">
+
+            <!-- Columna 1 -->
+            <section class="footer__col">
+                <div class="footer__content">
+                    <h4 class="footer__title">Medios de pago</h4>
+                    <span class="footer__text">Tarjetas de débito y crédito</span>
+                </div>
+            </section>
+
+            <!-- Columna 2 -->
+            <section class="footer__col">
+                <div class="footer__content">
+                    <h4 class="footer__title">Seguinos</h4>
+                    <div class="footer__list">
+                        <a href="https://facebook.com" target="_blank" class="footer__icon-link"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="footer__icon-link"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="footer__icon-link"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Columna 3 -->
+            <section class="footer__col">
+                <div class="footer__content">
+                    <div class="footer__copyright">
+                        <span>Copyright 2025 ©</span>
+                        <span>Juguetería Cósmica</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </footer>
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

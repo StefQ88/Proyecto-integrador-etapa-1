@@ -13,6 +13,7 @@
     @media (min-width: map-get($grid-breakpoints, lg)) {
       max-width: 75%; // Centra el bloque de 3 columnas
       margin: 0 auto; // Centra horizontalmente
+      justify-content: space-between; 
     }
   }
 
@@ -26,6 +27,7 @@
     text-align: center;
     box-sizing: border-box;
 
+    // linea divisoria entre columnas 
     &:not(:last-child)::after {
       content: "";
       position: absolute;
@@ -65,9 +67,8 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 0.60rem;
+    gap: 0.6rem;
     padding: 0;
-    margin: 0;
     opacity: 0.75;
 
   }
@@ -76,16 +77,11 @@
     font-size: 1rem;
     color: $color-white;
     display: inline-flex;
-    transition: transform 0.3s ease, color 0.3s ease;
 
     &:hover {
       color: $color-orange;
-      transform: scale(1.1);
     }
 
-    i {
-      pointer-events: none; 
-    }
   }
 
   &__text {
@@ -108,10 +104,9 @@
     text-transform: uppercase;
     color: $color-gray-medium;
     font-size: 0.7rem;
-    opacity: 0.5;
+    opacity: 0.75;
   }
 
-  
   
 }
 
