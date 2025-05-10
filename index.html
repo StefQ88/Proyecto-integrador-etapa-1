@@ -6,26 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juguetería Cósmica</title>
     <link rel="stylesheet" href="./sass/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
     <div class="site-wrapper">
-        
+
         <header class="header">
             <div class="container header__container">
-    
-                <!-- IZQUIERDA -->
+
+                <!-- IZQUIERDA: Logo + texto -->
                 <div class="header__left">
-    
-                    <!-- Botón menú hamburguesa (izquierda) -->
-                    <button class="header__icon header__menu" onclick="handleMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-    
-                    <!-- Logo (centrado) -->
                     <div class="header__logo">
-                        <a href="" class="header__logo-link">
+                        <a href="/" class="header__logo-link">
                             <img src="./images/logo.png" alt="Logo Juguetería Cósmica" />
                         </a>
                         <div class="header__text">
@@ -34,9 +27,8 @@
                         </div>
                     </div>
                 </div>
-    
-                <!-- CENTRO -->
-                <!-- Menú de navegación (visible en desktop) -->
+
+                <!-- CENTRO: Navbar (visible en md+) -->
                 <nav class="navbar header__center">
                     <ul class="navbar__list">
                         <li class="navbar__item"><a href="#" class="navbar__link">Inicio</a></li>
@@ -45,45 +37,52 @@
                         <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
                     </ul>
                 </nav>
-    
-                <!-- DERECHA -->
+
+                <!-- DERECHA: Botones (hamburguesa + lupa) + buscador -->
                 <div class="header__right">
-                    <button class="header__icon header__search-button" onclick="toggleSearch()">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-    
-                    <!-- Buscador: visible en desktop y oculto en mobile-->
+
+                    <!-- Grupo de botones -->
+                    <!-- Buscador (visible solo en lg+) -->
                     <div class="search" id="searchWrapper">
                         <form class="search__form">
-                            <input type="text" class="search__input" placeholder="Buscar productos ...">
+                            <input type="text" class="search__input" placeholder="Buscar productos ..." />
                             <button type="submit" class="search__button">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
                     </div>
+                    <div class="header__actions">
+                        <button class="header__icon header__menu" onclick="handleMenu()">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <button class="header__icon header__search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
                 </div>
-    
+
             </div>
         </header>
-    
-    
+
+
         <aside id="mobile_menu" class="menu__container">
             <h2 class="menu__title">Menú</h2>
             <nav class="menu__navigation">
                 <ul class="menu__list">
                     <li class="menu__item"><a href="#">Nosotros</a></li>
-                    <li class="menu__item"><a href="#">Contacto</a></li>
+                    <li class="menu__item"><a href="./pages/contact.html">Contacto</a></li>
                     <li class="menu__item"><a href="#">Alta productos</a></li>
                 </ul>
             </nav>
         </aside>
-    
+
         <main class="main">
             <div class="container main__container">
-    
-    
+
+
                 <section class="grid mb-8 banner-cards">
-    
+
                     <!-- Banner - Card izquierda -->
                     <div class="col-12 col-sm-6 col-md-4 banner-card">
                         <div class="banner-card__image">
@@ -93,14 +92,14 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Banner - Texto central -->
                     <div class="col-12 col-sm-6 col-md-4 banner-card banner-card--center">
                         <h2 class="banner-card__title">¡Bienvenidos!</h2>
                         <p class="banner-card__intro">Un espacio para crear, imaginar y sonreír</p>
                         <p class="banner-card__select">Elegí tu favorito</p>
                     </div>
-    
+
                     <!-- Banner - Imagen derecha -->
                     <div class="col-12 col-sm-6 col-md-4 banner-card banner-card--right hide-below-md ">
                         <div class="banner-card__image">
@@ -110,18 +109,18 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </section>
-    
+
                 <div class="star-line">✦ ✦ ✦ ✦ ✦</div>
-    
+
                 <!-- GRID DE PRODUCTOS -->
                 <section class="main__grid grid" aria-label="Listado de productos">
                     <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
                         <div class="card__image-container">
                             <img src="./images/prueba.png" alt="prueba" class="card__image" />
                         </div>
-    
+
                         <div class="card__content">
                             <div class="card__header">
                                 <h3 class="card__title">Metegol</h3>
@@ -134,12 +133,12 @@
                             <a href="#" class="btn btn__card">Comprar</a>
                         </div>
                     </article>
-    
+
                     <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
                         <div class="card__image-container">
                             <img src="./images/prueba.png" alt="prueba" class="card__image" />
                         </div>
-    
+
                         <div class="card__content">
                             <div class="card__header">
                                 <h3 class="card__title">Metegol</h3>
@@ -152,12 +151,12 @@
                             <a href="#" class="btn btn__card">Comprar</a>
                         </div>
                     </article>
-    
+
                     <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
                         <div class="card__image-container">
                             <img src="./images/prueba.png" alt="prueba" class="card__image" />
                         </div>
-    
+
                         <div class="card__content">
                             <div class="card__header">
                                 <h3 class="card__title">Metegol</h3>
@@ -170,12 +169,12 @@
                             <a href="#" class="btn btn__card">Comprar</a>
                         </div>
                     </article>
-    
+
                     <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
                         <div class="card__image-container">
                             <img src="./images/prueba.png" alt="prueba" class="card__image" />
                         </div>
-    
+
                         <div class="card__content">
                             <div class="card__header">
                                 <h3 class="card__title">Metegol</h3>
@@ -188,12 +187,12 @@
                             <a href="#" class="btn btn__card">Comprar</a>
                         </div>
                     </article>
-    
+
                     <article class="card col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-3">
                         <div class="card__image-container">
                             <img src="./images/prueba.png" alt="prueba" class="card__image" />
                         </div>
-    
+
                         <div class="card__content">
                             <div class="card__header">
                                 <h3 class="card__title">Metegol</h3>
@@ -206,16 +205,16 @@
                             <a href="#" class="btn btn__card">Comprar</a>
                         </div>
                     </article>
-    
-    
+
+
                 </section>
             </div>
         </main>
-    
-    
+
+
         <footer class="footer">
             <div class="container footer__container">
-    
+
                 <!-- Columna 1 -->
                 <section class="footer__col">
                     <div class="footer__content">
@@ -223,11 +222,11 @@
                         <span class="footer__text">Tarjetas de débito y crédito</span>
                     </div>
                 </section>
-    
+
                 <!-- Columna 2 -->
                 <section class="footer__col">
                     <div class="footer__content">
-                        <h4 class="footer__title">Seguinos</h4>
+                        <h4 class="footer__title">Seguínos en:</h4>
                         <div class="footer__list">
                             <a href="https://facebook.com" target="_blank" class="footer__icon-link"><i
                                     class="fa-brands fa-facebook"></i></a>
@@ -238,7 +237,7 @@
                         </div>
                     </div>
                 </section>
-    
+
                 <!-- Columna 3 -->
                 <section class="footer__col">
                     <div class="footer__content">
@@ -249,10 +248,11 @@
                     </div>
                 </section>
             </div>
-    
+
         </footer>
-    
-        <script src="./js/index.js"></script>
+
+        <script src="./js/index.js" defer></script>
+
     </div>
 </body>
 

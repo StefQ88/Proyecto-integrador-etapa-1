@@ -1,3 +1,5 @@
+
+
 let showMenu = false;
 
 const handleMenu = () => {
@@ -5,11 +7,12 @@ const handleMenu = () => {
 
     if (showMenu) {
         menu.className = menu.className.replace("-visible", "");
-        document.body.classList.remove("no-scroll"); 
+        document.body.classList.remove("no-scroll");
     } else {
         menu.className = menu.className.concat("-visible");
-        document.body.classList.add("no-scroll"); 
+        document.body.classList.add("no-scroll");
     }
 
     showMenu = !showMenu;
 };
+

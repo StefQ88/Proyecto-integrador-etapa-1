@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  z-index: 10;
   background-color: $color-blue;
   width: 100%;
 
@@ -9,6 +11,7 @@
     align-items: center;
     padding: 1rem 0;
     gap: 1.5rem;
+    max-height: 13rem;
 
     @media (min-width: map-get($grid-breakpoints, lg)) {
       max-width: 75%; // Centra el bloque de 3 columnas
@@ -56,10 +59,9 @@
 
   &__title {
     font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $color-orange;
-    opacity: 0.85;
+    font-weight: 600;
+    color: $color-white;
+    opacity: 0.90;
     margin-bottom: 0.5rem;
   }
 

@@ -3,27 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=360, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juguetería Cósmica</title>
     <link rel="stylesheet" href="../sass/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
     <header class="header">
         <div class="container header__container">
 
-            <!-- IZQUIERDA -->
+            <!-- IZQUIERDA: Logo + texto -->
             <div class="header__left">
-
-                <!-- Botón menú hamburguesa (izquierda) -->
-                <button class="header__icon header__menu" onclick="handleMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
-                <!-- Logo (centrado) -->
                 <div class="header__logo">
-                    <a href="" class="header__logo-link">
+                    <a href="/" class="header__logo-link">
                         <img src="../images/logo.png" alt="Logo Juguetería Cósmica" />
                     </a>
                     <div class="header__text">
@@ -33,27 +26,33 @@
                 </div>
             </div>
 
-            <!-- CENTRO -->
-            <!-- Menú de navegación (visible en desktop) -->
+            <!-- CENTRO: Navbar (visible en md+) -->
             <nav class="navbar header__center">
                 <ul class="navbar__list">
                     <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
-                    <li class="navbar__item"><a href="pages/contact.html" class="navbar__link">Contacto</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Contacto</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
                 </ul>
             </nav>
 
-            <!-- DERECHA -->
+            <!-- DERECHA: Botones (hamburguesa + lupa) + buscador -->
             <div class="header__right">
-                <button class="header__icon header__search-button" onclick="toggleSearch()">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
 
-                <!-- Buscador: visible en desktop y oculto en mobile-->
+                <!-- Grupo de botones -->
+                <div class="header__actions">
+                    <button class="header__icon header__menu" onclick="handleMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <button class="header__icon header__search-button" onclick="toggleSearch()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- Buscador (visible solo en lg+) -->
                 <div class="search" id="searchWrapper">
                     <form class="search__form">
-                        <input type="text" class="search__input" placeholder="Buscar productos ...">
+                        <input type="text" class="search__input" placeholder="Buscar productos ..." />
                         <button type="submit" class="search__button">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -64,11 +63,11 @@
         </div>
     </header>
 
-
     <aside id="mobile_menu" class="menu__container">
         <h2 class="menu__title">Menú</h2>
         <nav class="menu__navigation">
             <ul class="menu__list">
+                <li class="menu__item"><a href="../index.html">Inicio</a></li>
                 <li class="menu__item"><a href="#">Nosotros</a></li>
                 <li class="menu__item"><a href="#">Contacto</a></li>
                 <li class="menu__item"><a href="#">Alta productos</a></li>
@@ -76,8 +75,63 @@
         </nav>
     </aside>
 
-    <main class="main">
-        <h2>Contactanos</h2>
+    <main class="contact">
+        <div class="container">
+
+            <div class="contact__wrapper">
+                <h2 class="section-title">Contáctenos</h2>
+
+                <form class="form" id="contact-form">
+
+                    <div class="form__group">
+                        <label class="form__label" for="name" required>Nombre</label>
+                        <span id="name-error" class="form__error"></span>
+                        <input class="form__input" type="text" name="name" id="name">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="surname" required>Apellido(s)</label>
+                        <span id="surname-error" class="form__error"></span>
+                        <input class="form__input" type="text" name="surname" id="surname">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="telephone" required>Número de teléfono</label>
+                        <span id="telephone-error" class="form__error"></span>
+                        <input class="form__input" type="text" name="telephone" id="telephone">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="email" required>Email</label>
+                        <span id="email-error" class="form__error"></span>
+                        <input class="form__input" type="email" name="email" id="email">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="reason" required>Motivo</label>
+                        <span id="reason-error" class="form__error"></span>
+                        <select class="form__input" name="reason" id="reason">
+                            <option value="">Seleccionar una opción</option>
+                            <option value="compras-web">Compras Web</option>
+                            <option value="reclamo-producto">Reclamos de productos</option>
+                            <option value="otro">Otros Motivos</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="body" required>Mensaje</label>
+                        <span id="body-error" class="form__error"></span>
+                        <textarea class="form__input" name="body" id="body"></textarea>
+                    </div>
+
+                    <button type="submit" class="form__submit">
+                        Enviar
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
     </main>
 
 
@@ -95,7 +149,7 @@
             <!-- Columna 2 -->
             <section class="footer__col">
                 <div class="footer__content">
-                    <h4 class="footer__title">Seguinos</h4>
+                    <h4 class="footer__title">Seguínos en:</h4>
                     <div class="footer__list">
                         <a href="https://facebook.com" target="_blank" class="footer__icon-link"><i
                                 class="fa-brands fa-facebook"></i></a>
@@ -121,7 +175,8 @@
     </footer>
 
 
-    <script src="./js/index.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 
 </html>

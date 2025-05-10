@@ -1,0 +1,31 @@
+.contact {
+    min-height: calc(100vh - 12rem - 6rem); // Altura total - header - footer
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem; // Espaciado general lateral y vertical
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding: 2rem 1rem;
+        max-width: 480px;
+        margin: 0 auto;
+
+        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+            padding: 1.2rem 1rem;
+        }
+
+        @media screen and (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg)) {
+            max-width: 600px;
+        }
+
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            margin-left: 0;
+            margin-right: auto;
+            max-width: 600px;
+        }
+    }
+}

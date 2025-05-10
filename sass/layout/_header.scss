@@ -1,41 +1,67 @@
 .header {
     background-color: $color-blue;
     border-top: 7px solid $color-orange;
-
-    padding-block: 0.5rem; //espacio vertical
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
+    padding-block: 0.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 
     &__container {
         display: flex;
         align-items: center;
-        justify-content: space-between; //asi distribuye los grupos
-
-        flex-wrap: nowrap; // en linea horizontal
-        column-gap: 2rem;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 2rem;
         padding: 0.5rem;
 
-        // Layout en pantallas móviles y tablets (menor a md)
         @media screen and (max-width: map-get($grid-breakpoints, md)) {
-            flex-direction: row;
-            flex-wrap: wrap; // en mobile pueden bajar
-            row-gap: 1.2rem;
+            flex-wrap: wrap;
             justify-content: center;
-            text-align: center;
-            position: relative; // para ubicar los botones absolutos
         }
     }
 
-
-    &__left {
+    // Bloques principales
+    .header__left {
+        flex: 0 1 auto;
         display: flex;
         align-items: center;
-        gap: 1rem;
         justify-content: flex-start;
+        flex: 0 1 auto;
 
+        @media screen and (max-width: map-get($grid-breakpoints, md)) {
+            flex: 1 1 100%;
+            justify-content: center;
+        }
+    }
+
+    .header__center {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+            display: none; // oculto en móviles
+        }
+    }
+
+    .header__right {
+        flex: 0 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+
+        @media screen and (max-width: map-get($grid-breakpoints, md)) {
+            flex: 1 1 100%;
+            justify-content: center;
+        }
+    }
+
+    .header__logo,
+    .header__text {
+        flex: 0 1 auto; // No crece, se adapta a su contenido
     }
 
     &__logo {
@@ -51,11 +77,9 @@
             display: block;
         }
 
-        // Centrado en móvil
-        @media screen and (max-width: map-get($grid-breakpoints, md)) {
-            justify-content: center;
-            flex-direction: column; //en mobile apila logo y texto
-            align-items: center;
+        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+            flex-direction: column;
+            text-align: center;
             text-align: center;
         }
     }
@@ -65,8 +89,8 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        flex: 1;
-        min-width: 0; 
+        min-width: 0;
+
 
         @media screen and (min-width: map-get($grid-breakpoints, md)) {
             align-items: flex-start;
@@ -78,18 +102,25 @@
         font-family: $font-tertiary;
         font-size: 2.1rem;
         font-weight: 800;
-        margin-top: 0; //elimino separacion arriba
+        margin-top: 0;
+        white-space: nowrap;
+        text-align: center;
 
 
         background: linear-gradient(90deg, $color-orange, $color-yellow);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-align: center;
 
         @media screen and (max-width:map-get($grid-breakpoints, sm)) {
             font-size: 1.6rem; //ajusto texto para pantallas chicas
             max-width: 90vw;
+        }
+
+        @media screen and (min-width: map-get($grid-breakpoints, md)) and (max-width: 1200px) {
+            max-width: 200px;
+            white-space: normal;
+            text-align: left;
         }
     }
 
@@ -102,32 +133,10 @@
 
     }
 
-    // Grupo CENTRO: navegación
-    &__center {
+
+    &__actions {
         display: flex;
-        justify-content: center;
-        align-items: center;
-
-        flex: 0 0 auto; 
-
-        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
-            display: none; // oculto en mobile
-        }
-    }
-
-    // Grupo DERECHO: lupa + buscador
-    &__right {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex: 0 0 auto;
-        min-width: 0;
-        gap: 1rem;
-
-
-        @media screen and (max-width: map-get($grid-breakpoints, md)) {
-            justify-self: end;
-        }
+        gap: 0.5rem;
     }
 
     // Iconos de accion (menu, lupa)
@@ -146,25 +155,22 @@
         }
     }
 
-    &__menu {
-        display: none;
-
-        @media screen and (max-width: map-get($grid-breakpoints, md)) {
-            display: inline-flex;
-            position: absolute;
-            left: 1rem;
-            top: 1rem;
-        }
-    }
 
     &__search-button {
         display: none;
 
-        @media screen and (max-width: map-get($grid-breakpoints, md)) {
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
             display: inline-flex;
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
         }
     }
+
+    &__menu {
+        display: none;
+
+        // Solo visible en `md` y abajo
+        @media screen and (max-width: map-get($grid-breakpoints, md)) {
+            display: inline-flex;
+        }
+    }
+
 }
