@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juguetería Cósmica - Contáctenos</title>
+    <title>Juguetería Cósmica - Alta</title>
     <link rel="stylesheet" href="../sass/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
 </head>
 
-<body class="site-wrapper">
+<body>
     <header class="header">
         <div class="container header__container">
             <!-- IZQUIERDA: Logo + texto -->
@@ -33,7 +35,7 @@
                         <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
                         <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
                         <li class="navbar__item"><a href="./contact.html" class="navbar__link">Contacto</a></li>
-                        <li class="navbar__item"><a href="./upload.html" class="navbar__link">Alta productos</a>
+                        <li class="navbar__item"><a href="pages/upload.html" class="navbar__link">Alta productos</a>
                         </li>
                     </ul>
                 </nav>
@@ -58,67 +60,70 @@
         </div>
     </header>
 
-
-    <aside id="mobile_menu" class="menu__container">
-        <h2 class="menu__title">Menú</h2>
-        <nav class="menu__navigation">
-            <ul class="menu__list">
-                <li class="menu__item"><a href="../index.html">Inicio</a></li>
-                <li class="menu__item"><a href="#">Nosotros</a></li>
-                <li class="menu__item"><a href="#">Contacto</a></li>
-                <li class="menu__item"><a href="./upload.html">Alta productos</a></li>
-            </ul>
-        </nav>
-    </aside>
-
     <main class="main contact">
         <div class="container">
 
             <div class="contact__wrapper">
-                <h2 class="section-title">Contáctenos</h2>
+                <h2 class="section-title">Alta de productos</h2>
 
                 <form class="form" id="contact-form">
 
                     <div class="form__group">
-                        <label class="form__label" for="name" required>Nombre</label>
+                        <label class="form__label" for="name" required>Nombre del producto</label>
                         <span id="name-error" class="form__error"></span>
                         <input class="form__input" type="text" name="name" id="name">
                     </div>
 
                     <div class="form__group">
-                        <label class="form__label" for="surname" required>Apellido(s)</label>
-                        <span id="surname-error" class="form__error"></span>
-                        <input class="form__input" type="text" name="surname" id="surname">
+                        <label class="form__label" for="price" required>Precio</label>
+                        <span id="price-error" class="form__error"></span>
+                        <input class="form__input" type="number" name="price" id="price">
                     </div>
 
                     <div class="form__group">
-                        <label class="form__label" for="telephone" required>Número de teléfono</label>
-                        <span id="telephone-error" class="form__error"></span>
-                        <input class="form__input" type="text" name="telephone" id="telephone">
+                        <label class="form__label" for="stock" required>Stock</label>
+                        <span id="stock-error" class="form__error"></span>
+                        <input class="form__input" type="number" name="stock" id="stock">
                     </div>
 
                     <div class="form__group">
-                        <label class="form__label" for="email" required>Email</label>
-                        <span id="email-error" class="form__error"></span>
-                        <input class="form__input" type="email" name="email" id="email">
+                        <label class="form__label" for="brand" required>Marca</label>
+                        <span id="brand-error" class="form__error"></span>
+                        <input class="form__input" type="text" name="brand" id="brand">
                     </div>
 
                     <div class="form__group">
-                        <label class="form__label" for="reason" required>Motivo</label>
-                        <span id="reason-error" class="form__error"></span>
-                        <select class="form__input" name="reason" id="reason">
+                        <label class="form__label" for="category" required>Categoría</label>
+                        <span id="category-error" class="form__error"></span>
+                        <select class="form__input" name="category" id="category">
                             <option value="">Seleccionar una opción</option>
-                            <option value="compras-web">Compras Web</option>
-                            <option value="reclamo-producto">Reclamos de productos</option>
-                            <option value="otro">Otros Motivos</option>
+                            <option value="compras-web">Primeros Juguetes</option>
+                            <option value="reclamo-producto">Juguetes Vehiculos</option>
+                            <option value="otro">Juguetes Muñecas Accesorios</option>
                         </select>
                     </div>
 
                     <div class="form__group">
-                        <label class="form__label" for="body" required>Mensaje</label>
-                        <span id="body-error" class="form__error"></span>
-                        <textarea class="form__input" name="body" id="body"></textarea>
+                        <label class="form__label" for="short_description" required>Descripción Corta</label>
+                        <span id="short_description-error" class="form__error"></span>
+                        <textarea class="form__input" name="short_description" id="short_description"></textarea>
                     </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="large_description" required>Descripción Larga</label>
+                        <span id="large_description-error" class="form__error"></span>
+                        <textarea class="form__input" name="large_description" id="large_description"></textarea>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="age-from-value">Edad desde</label>
+                    </div>
+
+
+
+
+
+
 
                     <button type="submit" class="form__submit">
                         Enviar
@@ -129,6 +134,10 @@
 
         </div>
     </main>
+
+
+
+
 
 
     <footer class="footer">
@@ -170,9 +179,8 @@
 
     </footer>
 
+    <script src="./js/index.js" defer></script>
 
-    <script src="../js/index.js"></script>
-    <script src="../js/contact.js"></script>
 </body>
 
 </html>
