@@ -1,13 +1,13 @@
 .header {
-    background-color: $color-blue;
-    border-top: 8px solid $color-orange;
+    background-color: $header-bg-color;
+    border-top: 8px solid $secondary-color;
     position: fixed; //fija header en la parte superior
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 13rem;
+    height: 13.5rem;
     overflow: hidden;
-    padding: 0; // evitamos doble espacio
+    padding: 0;
 
     @media screen and (min-width: map-get($grid-breakpoints, sm)) {
         height: 10rem;
@@ -31,29 +31,32 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 1rem;
-        padding: 0.5rem 1rem 0 1rem; 
+        padding: 0.5rem 1rem 0 1rem;
 
         @media screen and (max-width: map-get($grid-breakpoints, sm)) {
             flex-direction: column;
             justify-content: center;
             text-align: center;
-
         }
-
     }
 
-    // Bloques principales
     .header__left {
+        flex: 0 1 auto;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         gap: 0.5rem;
+
+        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+            flex: 1 1 100%;
+            justify-content: center;
+        }
 
         @media screen and (max-width: map-get($grid-breakpoints, md)) {
             flex: 1 1 100%;
             justify-content: center;
         }
     }
-
 
     &__logo {
         display: flex;
@@ -63,7 +66,7 @@
 
 
         img {
-            height: 70px; //tamaño logo por defecto desktop
+            height: 80px; //tamaño logo por defecto desktop
             width: auto;
             object-fit: contain;
         }
@@ -74,15 +77,12 @@
             img {
                 height: 60px;
             }
-
         }
 
         @media screen and (max-width: map-get($grid-breakpoints, md)) {
-
             img {
                 height: 70px;
             }
-
         }
 
     }
@@ -104,25 +104,26 @@
 
     &__title {
         font-family: $font-tertiary;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 800;
         margin-top: 0;
         white-space: nowrap;
         text-align: center;
 
 
-        background: linear-gradient(90deg, $color-orange, $color-yellow);
+        background: linear-gradient(90deg, $secondary-color, $tertiary-color);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
         @media screen and (max-width:map-get($grid-breakpoints, sm)) {
-            font-size: 1.3rem; //ajusto texto para pantallas chicas
+            font-size: 1.6rem; //ajusto texto para pantallas chicas
             white-space: normal;
         }
 
         @media screen and (min-width: map-get($grid-breakpoints, md)) and (max-width: 1200px) {
             max-width: 200px;
+            font-size: 1.8rem;
             white-space: normal;
             text-align: left;
         }
@@ -139,21 +140,11 @@
     }
 
 
-    &__center {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-
-        @media screen and (max-width: map-get($grid-breakpoints, md)) {
-            display: none; // oculto en móviles
-        }
-    }
-
     .header__right {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        // align-items: center;
         justify-content: flex-end;
-        gap: 1rem;
 
         @media screen and (max-width: map-get($grid-breakpoints, md)) {
             flex: 1 1 100%;
@@ -162,9 +153,21 @@
         }
     }
 
+    // DERECHA: navbar + hamburguesa + lupa
+    &__navbar {
+        flex: 0 1 auto;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: map-get($grid-breakpoints, md)) {
+            display: none; // oculto en móviles
+        }
+    }
+
 
     &__actions {
         display: flex;
+        justify-content: center;
         gap: 0.5rem;
     }
 
@@ -180,16 +183,7 @@
         transition: border-color 0.2s, background-color 0.2s;
 
         &:hover {
-            border-color: $color-orange;
-        }
-    }
-
-
-    &__search-button {
-        display: none;
-
-        @media screen and (max-width: map-get($grid-breakpoints, md)) {
-            display: inline-flex;
+            border-color: $color-secondary-hover;
         }
     }
 
@@ -203,12 +197,20 @@
     }
 
 
+    &__search-button {
+        display: none;
+
+        @media screen and (max-width: map-get($grid-breakpoints, md)) {
+            display: inline-flex;
+        }
+    }
+
+
     // Buscador visible solo en pantallas grandes
     .search {
         display: flex;
         justify-content: flex-end;
-        padding: 0.25rem 1rem;
-        background-color: $color-blue;
+        background-color: $primary-color;
         width: 100%;
         box-sizing: border-box;
 
@@ -246,7 +248,7 @@
             transform: translateY(-50%);
             background-color: transparent;
             border: none;
-            color: $color-orange;
+            color: $secondary-color;
             font-size: 1rem;
             cursor: pointer;
             display: inline-flex;

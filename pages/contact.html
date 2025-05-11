@@ -12,11 +12,10 @@
 <body class="site-wrapper">
     <header class="header">
         <div class="container header__container">
-
             <!-- IZQUIERDA: Logo + texto -->
             <div class="header__left">
                 <div class="header__logo">
-                    <a href="/" class="header__logo-link">
+                    <a href="../index.html" class="header__logo-link">
                         <img src="../images/logo.png" alt="Logo Juguetería Cósmica" />
                     </a>
                     <div class="header__text">
@@ -26,42 +25,39 @@
                 </div>
             </div>
 
-            <!-- CENTRO: Navbar (visible en md+) -->
-            <nav class="navbar header__center">
-                <ul class="navbar__list">
-                    <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Contacto</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
-                </ul>
-            </nav>
 
-            <!-- DERECHA: Botones (hamburguesa + lupa) + buscador -->
+            <!-- DERECHA: navbar + hamburguesa + lupa-->
             <div class="header__right">
-
-                <!-- Grupo de botones -->
+                <nav class="navbar header__navbar">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
+                        <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
+                        <li class="navbar__item"><a href="./contact.html" class="navbar__link">Contacto</a></li>
+                        <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a>
+                        </li>
+                    </ul>
+                </nav>
                 <div class="header__actions">
                     <button class="header__icon header__menu" onclick="handleMenu()">
                         <i class="fa-solid fa-bars"></i>
                     </button>
-                    <button class="header__icon header__search-button" onclick="toggleSearch()">
+                    <button class="header__icon header__search-button">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
-
-                <!-- Buscador (visible solo en lg+) -->
-                <div class="search" id="searchWrapper">
-                    <form class="search__form">
-                        <input type="text" class="search__input" placeholder="Buscar productos ..." />
-                        <button type="submit" class="search__button">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
-                </div>
             </div>
+        </div>
 
+        <div class="search container" id="searchWrapper">
+            <form class="search__form">
+                <input type="text" class="search__input" placeholder="Buscar productos ..." />
+                <button type="submit" class="search__button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
     </header>
+
 
     <aside id="mobile_menu" class="menu__container">
         <h2 class="menu__title">Menú</h2>

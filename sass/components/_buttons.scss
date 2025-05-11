@@ -15,16 +15,13 @@
 
 
     &__card {
-        background-color: $color-red;
+        background-color:$danger-color;
         color: $color-white;
-        border: 1px solid $color-red;
+        border: 1px solid $danger-color;
 
         &:hover {
-            background-color: $color-red-strong;
+            background-color: $color-danger-hover;
         }
     }
-
-
-
 
 }

@@ -4,6 +4,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%;
-    box-sizing: border-box; //incluye padding en el width
+    box-sizing: border-box; 
     @include create-container-width();
 }

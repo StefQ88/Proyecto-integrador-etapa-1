@@ -1,4 +1,7 @@
-// Breakpoints (para media queries)
+// ==============================
+// BREAKPOINTS
+// ==============================
+
 $grid-breakpoints: (
     xs: 0,
     sm: 576px,
@@ -8,7 +11,6 @@ $grid-breakpoints: (
     xxl: 1400px
 );
 
-// Grid Widths (para containers máximos)
 $grid-width: (
     xs: 360px, 
     sm: 540px, 
@@ -19,45 +21,52 @@ $grid-width: (
 );
 
 // Breakpoint para ocultar elementos en pantallas chicas (menores a md = 768px)
-
 $hide-sm-max: 768px;
 
 
-// COLORES
+// ==============================
+// COLOR PALETTE
+// ==============================
 
-$color-blue: #1E40AF; // Header, botones principales, navegación
-$color-blue-light: #93C5FD; // Hover suave, fondo de tarjetas informativas
-$color-blue-strong: #1D4ED8; // Hover fuerte, íconos activos, links
+$color-primary: #1E40AF; 
+$color-primary-hover: #1D4ED8; 
+$color-primary-light: #93C5FD; 
 
-// 🟠 NARANJA - Secundario alegre (acción, entusiasmo)
-$color-orange: #F97316; // Botones secundarios, destacados
-$color-orange-light: #FED7AA; // Fondos suaves, etiquetas infantiles
-$color-orange-strong: #EA580C; // Hover botón naranja, énfasis
+$color-secondary: #F97316; 
+$color-secondary-hover: #EA580C; 
+$color-secondary-light: #FED7AA; 
 
-// 🟡 AMARILLO - Color acento (ofertas, edad, estrellas)
-$color-yellow: #FACC15; // Precios, calificaciones, badges “Nuevo”
-$color-yellow-light: #FEF9C3; // Fondo promoción, etiquetas suaves
-$color-yellow-strong: #EAB308; // Hover fuerte o ícono llamativo
+$color-tertiary: #FACC15; 
+$color-tertiary-hover: #EAB308; 
+$color-tertiary-light: #FEF9C3; 
 
-// 🔴 ROJO - Acción fuerte (urgencia, promociones)
-$color-red: #EF4444; // Botón “Comprar”, alertas visuales
-$color-red-light: #FECACA; // Fondo error suave, hover amigable
-$color-red-strong: #DC2626; // Hover de botón rojo, íconos de advertencia
+$color-danger: #EF4444; 
+$color-danger-hover: #DC2626; 
 
-// ✅ VERDE - Confirmación o positivo (en stock, edad)
 $color-success: #22C55E; // Confirmaciones, stock disponible, validación
-$color-success-light: #DCFCE7; // Fondo verde suave para éxito o resaltado
 
-// ⚪ NEUTROS
 $color-white: #FFFFFF; // Fondo general
 $color-gray-light: #F3F4F6; // Fondo alternativo, tarjetas
 $color-gray-medium: #D1D5DB; 
 $color-gray-dark: #111827; // Texto principal, íconos oscuros
 
-$success-color: #2a892a;
-$danger-color: #d02121;
-$warning-color: #c1aa17;
+$primary-color: $color-primary;
+$secondary-color: $color-secondary;
+$tertiary-color: $color-tertiary;
+$success-color: $color-success;
+$warning-color: $color-tertiary;  // Amarillo como warning
+$danger-color: $color-danger;
 
+// ==============================
+// LAYOUT / GENERAL
+// ==============================
+$body-bg-color: $color-white;
+$header-bg-color: $color-primary;
+$footer-bg-color: $color-primary;
+$grid-columns: 12;
+$grid-gap: 2rem;
+
+$card-min-width: 280px;
 
 // ==============================
 // FUENTES
@@ -67,27 +76,6 @@ $font-secondary: "Nunito", sans-serif;
 $font-tertiary: "Rubik", sans-serif;
 
 
-
-// ==============================
-// LAYOUT
-// ==============================
-$body-bg-color: $color-white;
-$header-bg-color: $color-blue;
-
-// $header-height: 19rem;
-
-// ==============================
-// GRID
-// ==============================
-$grid-columns: 12;
-
-
-
-// ==============================
-// CARD
-// ==============================
-$card-min-width: 280px;
-$grid-gap: 2rem;
 
 // ==============================
 // SPACINGS

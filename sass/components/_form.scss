@@ -20,7 +20,7 @@
         font-weight: 600;
         font-size: 1rem;
         text-align: left;
-        color: $color-blue;
+        color:$primary-color;
 
         &[required]::after {
             content: " *";
@@ -33,7 +33,7 @@
         display: block;
         width: 100%;
         padding: 0.5rem;
-        border: 1px solid lighten($color-blue, 30%); 
+        border: 1px solid lighten($primary-color, 30%); 
         border-radius: 0.5rem;
         font-size: 1rem;
         color: $color-gray-dark;
@@ -42,9 +42,9 @@
 
         // Estado activo o enfocado
         &:focus {
-            border-color: $color-orange;
+            border-color: $secondary-color;
             outline: none;
-            box-shadow: 0 0 0 2px rgba($color-orange, 0.3); 
+            box-shadow: 0 0 0 2px rgba($secondary-color, 0.3); 
         }
     }
 
@@ -70,14 +70,14 @@
         gap: 0.5rem;
         font-size: 1rem;
         font-weight: 600;
-        background-color: $color-blue;
+        background-color: $primary-color;
         color: $color-white;
-        border: 1px solid $color-blue;
+        border: 1px solid $primary-color;
         border-radius: 0.5rem;
         cursor: pointer;
 
         &:hover {
-            background-color: $color-blue-strong;
+            background-color: $color-primary-hover;
         }
     }
 

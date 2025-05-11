@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     &__image {
         position: relative;
@@ -60,31 +60,30 @@
     &__title {
         font-size: 2.4rem;
         font-family: $font-secondary;
-        color: $color-blue-strong;
+        color: $color-primary-hover;
         margin-bottom: 1rem;
     }
 
     &__intro {
         font-style: italic;
-        color: $color-blue;
+        color: $primary-color;
         font-size: 1.1rem;
         text-transform: lowercase;
     }
 
     &__select {
         font-weight: bold;
-        color: $color-orange-strong;
+        color:$secondary-color;
         font-size: 1.1rem;
         text-transform: lowercase;
     }
     
 }
 
-
 .star-line {
     text-align: center;
     font-size: 1.2rem;
-    color: $color-yellow;
+    color: $tertiary-color;
     letter-spacing: 0.5rem;
     margin: 2rem 0;
 }

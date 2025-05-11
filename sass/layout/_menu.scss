@@ -37,16 +37,16 @@
 
                 li.menu__item a {
                     font-size: 1.1rem;
-                    color: $color-blue-strong;
+                    color: $color-primary-hover;
                     text-decoration: none;
 
                     &:hover {
-                        color: $color-orange;
-                        background-color: rgba($color-orange, 0.05);
+                        color: $secondary-color;
+                        background-color: rgba($secondary-color, 0.05);
                     }
 
                     &:visited {
-                        color: $color-blue-light;
+                        color: $color-primary-light;
                     }
                 }
             }

@@ -1,11 +1,12 @@
-
 .navbar {
+    flex-shrink: 1;
     display: none;
 
     @media screen and (min-width: map-get($grid-breakpoints, md)) {
-        display: block;
-        text-align: center;
-        padding-bottom: 0.5rem;
+        display: flex; 
+        justify-content: flex-end;
+        align-items: center;
+        flex: 0 0 auto; 
     }
 
     // Lista de enlaces de navegacion
@@ -13,10 +14,11 @@
         display: flex;
         justify-content: flex-end;
         gap: 1.2rem;
-        flex-wrap: nowrap; 
+        flex-wrap: nowrap;
         list-style: none;
         padding: 0;
         margin: 0;
+        min-width: 0; 
     }
 
     // Enlaces individuales
@@ -24,12 +26,11 @@
         text-decoration: none;
         color: $color-white;
         font-weight: 600;
-        white-space: nowrap; 
+        white-space: nowrap;
 
         &:hover {
-            color: $color-orange;
+            color: $secondary-color;
         }
     }
 
 }
-

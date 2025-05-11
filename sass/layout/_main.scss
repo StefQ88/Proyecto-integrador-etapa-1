@@ -6,19 +6,19 @@
     min-width: 360px;
     margin-top: 0;
 
-    padding-top: 13rem; // asegura que el header no lo tape
-    padding-bottom: 2rem;
+    padding-top: 13.5rem; 
+    padding-bottom: 3rem;
 
     @media screen and (min-width: map-get($grid-breakpoints, sm)) {
         padding-top: 10rem; // tablet
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, md)) {
-        padding-top: 10rem; // desktop
+        padding-top: 9.5rem; // desktop
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, lg)) {
-        padding-top: 10rem; // desktop grande
+        padding-top: 9.5rem; // desktop grande
         max-width: map-get($grid-width, xxl);
     }
 }

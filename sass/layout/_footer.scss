@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   z-index: 10;
-  background-color: $color-blue;
+  background-color: $footer-bg-color;
   width: 100%;
   margin-top: 0;
 
@@ -16,7 +16,7 @@
 
     @media (min-width: map-get($grid-breakpoints, lg)) {
       max-width: 75%; // Centra el bloque de 3 columnas
-      margin: 0 auto; // Centra horizontalmente
+      margin: 0 auto; 
       justify-content: space-between; 
     }
   }
@@ -82,9 +82,8 @@
     display: inline-flex;
 
     &:hover {
-      color: $color-orange;
+      color: $secondary-color;
     }
-
   }
 
   &__text {
@@ -110,7 +109,6 @@
     opacity: 0.75;
   }
 
-  
 }
 
 @media (max-width: map-get($grid-breakpoints, md)) {
