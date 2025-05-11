@@ -34,23 +34,13 @@
                         <li class="navbar__item"><a href="#" class="navbar__link">Inicio</a></li>
                         <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
                         <li class="navbar__item"><a href="pages/contact.html" class="navbar__link">Contacto</a></li>
-                        <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
+                        <li class="navbar__item"><a href="pages/upload.html" class="navbar__link">Alta productos</a>
+                        </li>
                     </ul>
                 </nav>
 
-                <!-- DERECHA: Botones (hamburguesa + lupa) + buscador -->
+                <!-- DERECHA: Botones (hamburguesa + lupa)-->
                 <div class="header__right">
-
-                    <!-- Grupo de botones -->
-                    <!-- Buscador (visible solo en lg+) -->
-                    <div class="search" id="searchWrapper">
-                        <form class="search__form">
-                            <input type="text" class="search__input" placeholder="Buscar productos ..." />
-                            <button type="submit" class="search__button">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </form>
-                    </div>
                     <div class="header__actions">
                         <button class="header__icon header__menu" onclick="handleMenu()">
                             <i class="fa-solid fa-bars"></i>
@@ -59,9 +49,16 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
-
                 </div>
+            </div>
 
+            <div class="search container" id="searchWrapper">
+                <form class="search__form">
+                    <input type="text" class="search__input" placeholder="Buscar productos ..." />
+                    <button type="submit" class="search__button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
             </div>
         </header>
 

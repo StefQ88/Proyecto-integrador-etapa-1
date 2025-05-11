@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juguetería Cósmica - Contáctenos</title>
+    <title>Juguetería Cósmica - Alta</title>
     <link rel="stylesheet" href="../sass/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
-<body class="site-wrapper">
+<body>
     <header class="header">
         <div class="container header__container">
 
@@ -31,7 +31,7 @@
                 <ul class="navbar__list">
                     <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Contacto</a></li>
+                    <li class="navbar__item"><a href="./contact.html" class="navbar__link">Contacto</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">Alta productos</a></li>
                 </ul>
             </nav>
@@ -40,15 +40,6 @@
             <div class="header__right">
 
                 <!-- Grupo de botones -->
-                <div class="header__actions">
-                    <button class="header__icon header__menu" onclick="handleMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                    <button class="header__icon header__search-button" onclick="toggleSearch()">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-
                 <!-- Buscador (visible solo en lg+) -->
                 <div class="search" id="searchWrapper">
                     <form class="search__form">
@@ -58,24 +49,21 @@
                         </button>
                     </form>
                 </div>
+                <div class="header__actions">
+                    <button class="header__icon header__menu" onclick="handleMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <button class="header__icon header__search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
             </div>
 
         </div>
     </header>
 
-    <aside id="mobile_menu" class="menu__container">
-        <h2 class="menu__title">Menú</h2>
-        <nav class="menu__navigation">
-            <ul class="menu__list">
-                <li class="menu__item"><a href="../index.html">Inicio</a></li>
-                <li class="menu__item"><a href="#">Nosotros</a></li>
-                <li class="menu__item"><a href="#">Contacto</a></li>
-                <li class="menu__item"><a href="./upload.html">Alta productos</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <main class="main contact">
+    <main class="contact">
         <div class="container">
 
             <div class="contact__wrapper">
@@ -133,6 +121,9 @@
 
         </div>
     </main>
+
+
+
 
 
     <footer class="footer">

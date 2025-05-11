@@ -1,6 +1,5 @@
-/* ======= RESET BASE ======= */
 
-/* Modelo de caja consistente */
+
 *,
 *::before,
 *::after {
@@ -9,28 +8,23 @@
     padding: 0;
 }
 
-/* Estructura general del documento */
 html,
 body {
-    height: 100%; // Asegura que el sitio ocupe toda la altura de la ventana
-    overflow-x: hidden; // Previene scroll horizontal accidental
+    height: 100%;
+    overflow-x: hidden;
 }
 
-/* Tipografía base */
 body {
-    font-family: $font-tertiary; // Fuente definida en variables
+    font-family: $font-tertiary;
     line-height: 1.5;
-    // color: $color-blue; // Color de texto principal
-    background-color: $body-bg-color; // Color de fondo base
+    background-color: $body-bg-color;
 }
 
-/* Quita estilos por defecto de enlaces */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Encabezados sin márgenes extra */
 h1,
 h2,
 h3,
@@ -42,15 +36,8 @@ h6 {
     margin: 0;
 }
 
-/* Contenedor principal para layout con footer fijo */
 .site-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; // Altura mínima igual a viewport
+    min-height: 100vh;
 }
-
-
-/* DEBUG: activar para ver límites de elementos */
-// * {
-//   outline: 1px solid red;
-// }
