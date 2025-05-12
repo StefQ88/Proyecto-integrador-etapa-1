@@ -14,6 +14,7 @@
 <body>
     <header class="header">
         <div class="container header__container">
+
             <!-- IZQUIERDA: Logo + texto -->
             <div class="header__left">
                 <div class="header__logo">
@@ -30,12 +31,12 @@
 
             <!-- DERECHA: navbar + hamburguesa + lupa-->
             <div class="header__right">
-                <nav class="navbar header__navbar">
-                    <ul class="navbar__list">
-                        <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
-                        <li class="navbar__item"><a href="#" class="navbar__link">Nosotros</a></li>
-                        <li class="navbar__item"><a href="./contact.html" class="navbar__link">Contacto</a></li>
-                        <li class="navbar__item"><a href="./upload.html" class="navbar__link">Alta productos</a>
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item"><a href="../index.html" class="header__navbar-link">Inicio</a></li>
+                        <li class="header__navbar-item"><a href="#" class="header__navbar-link">Nosotros</a></li>
+                        <li class="header__navbar-item"><a href="./contact.html" class="header__navbar-link">Contacto</a></li>
+                        <li class="header__navbar-item"><a href="./upload.html" class="header__navbar-link">Alta productos</a>
                         </li>
                     </ul>
                 </nav>
@@ -59,6 +60,7 @@
             </form>
         </div>
     </header>
+
 
     <main class="main contact">
         <div class="container">
@@ -91,16 +93,16 @@
 
                     <!-- Marca -->
                     <div class="form__group">
-                        <label class="form__label" for="brand" required>Marca</label>
+                        <label class="form__label" for="brand" aria-required="true">Marca</label>
                         <span id="brand-error" class="form__error"></span>
-                        <input class="form__input" type="text" name="brand" id="brand">
+                        <input class="form__input" type="text" name="brand" id="brand" required>
                     </div>
 
                     <!-- Categoría -->
                     <div class="form__group">
-                        <label class="form__label" for="category" required>Categoría</label>
+                        <label class="form__label" for="category" aria-required="true">Categoría</label>
                         <span id="category-error" class="form__error"></span>
-                        <select class="form__input" name="category" id="category">
+                        <select class="form__input" name="category" id="category" required>
                             <option value="">Seleccionar una opción</option>
                             <option value="compras-web">Primeros Juguetes</option>
                             <option value="reclamo-producto">Juguetes Vehiculos</option>
@@ -110,24 +112,24 @@
 
                     <!-- Descripción Corta -->
                     <div class="form__group">
-                        <label class="form__label" for="short_description" required>Descripción Corta</label>
+                        <label class="form__label" for="short_description" aria-required="true">Descripción Corta</label>
                         <span id="short_description-error" class="form__error"></span>
                         <textarea class="form__input" name="short_description" id="short_description"></textarea>
                     </div>
 
                     <!-- Descripción Larga -->
                     <div class="form__group">
-                        <label class="form__label" for="large_description" required>Descripción Larga</label>
+                        <label class="form__label" for="large_description" aria-required="true">Descripción Larga</label>
                         <span id="large_description-error" class="form__error"></span>
                         <textarea class="form__input" name="large_description" id="large_description"></textarea>
                     </div>
 
                     <!-- Edad desde -->
                     <div class="form__group">
-                        <label class="form__label" for="age_from-value">Edad desde</label>
+                        <label class="form__label" for="age_from-value" aria-required="true">Edad desde</label>
                         <span id="age_from-error" class="form__error"></span>
                         <div class="form__inline-group">
-                            <input class="form__input form__input--small" type="number" name="age_from-value"
+                            <input class="form__input" type="number" name="age_from-value"
                                 id="age_from-value" min="0" placeholder="0" required>
                             <select class="form__input" name="age_from-unit" id="age_from-unit" required>
                                 <option value="meses">meses</option>
@@ -138,7 +140,7 @@
 
                     <!-- Edad hasta -->
                     <div class="form__group">
-                        <label class="form__label" for="age_to-value">Edad hasta</label>
+                        <label class="form__label" for="age_to-value" aria-required="true">Edad hasta</label>
                         <span id="age_to-error" class="form__error"></span>
                         <div class="form__inline-group">
                             <input class="form__input form__input--small" type="number" name="age_to-value"
@@ -152,8 +154,8 @@
 
                     <!-- Envío sin cargo -->
                     <div class="form__group">
-                        <label class="form__checkbox-wrapper">
-                            <input class="form__checkbox" type="checkbox" name="free_delivery" id="free_delivery">
+                        <label class="form__checkbox-wrapper" aria-required="true">
+                            <input class="form__checkbox" type="checkbox" name="free_delivery" id="free_delivery"  required>
                             <span>Envío sin cargo</span>
                         </label>
                         <span id="free_delivery-error" class="form__error"></span>
@@ -161,9 +163,9 @@
 
                     <!-- Imagen -->
                     <div class="form__group">
-                        <label class="form__label" for="image" required>Imagen</label>
+                        <label class="form__label" for="image" aria-required="true">Imagen</label>
                         <span id="image-error" class="form__error"></span>
-                        <input class="form__input" type="file" name="image" id="image"/>
+                        <input class="form__input" type="file" name="image" id="image"required/>
                     </div>
 
                     <!-- Enviar -->
@@ -176,11 +178,6 @@
 
         </div>
     </main>
-
-
-
-
-
 
     <footer class="footer">
         <div class="container footer__container">

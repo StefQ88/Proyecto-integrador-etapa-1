@@ -47,6 +47,7 @@
         }
     }
 
+
     // Texto de error debajo del campo
     &__error {
         display: none;
@@ -84,6 +85,7 @@
         display: flex;
         gap: 1rem;
         width: 100%;
+
     }
 
     &__checkbox-wrapper {
@@ -118,6 +120,20 @@
         align-items: center;
     }
 
+    &__input[type="file"] {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
 
+        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+            font-size: 0.6rem;
+        }
+
+    }
 
 }

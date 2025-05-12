@@ -1,4 +1,4 @@
-.navbar {
+.header__navbar {
     flex-shrink: 1;
     display: none;
 
@@ -10,7 +10,7 @@
     }
 
     // Lista de enlaces de navegacion
-    &__list {
+    &-list {
         display: flex;
         justify-content: flex-end;
         gap: 1.2rem;
@@ -22,7 +22,7 @@
     }
 
     // Enlaces individuales
-    &__link {
+    &-link {
         text-decoration: none;
         color: $color-white;
         font-weight: 600;

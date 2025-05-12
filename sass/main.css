@@ -1364,19 +1364,19 @@ h3 {
   }
 }
 
-.navbar {
+.header__navbar {
   flex-shrink: 1;
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .navbar {
+  .header__navbar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex: 0 0 auto;
   }
 }
-.navbar__list {
+.header__navbar-list {
   display: flex;
   justify-content: flex-end;
   gap: 1.2rem;
@@ -1386,13 +1386,13 @@ h3 {
   margin: 0;
   min-width: 0;
 }
-.navbar__link {
+.header__navbar-link {
   text-decoration: none;
   color: #FFFFFF;
   font-weight: 600;
   white-space: nowrap;
 }
-.navbar__link:hover {
+.header__navbar-link:hover {
   color: #F97316;
 }
 
@@ -1847,6 +1847,21 @@ h3 {
   position: relative;
   display: inline-flex;
   align-items: center;
+}
+.form__input[type=file] {
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 576px) {
+  .form__input[type=file] {
+    font-size: 0.6rem;
+  }
 }
 
 .section-title {
