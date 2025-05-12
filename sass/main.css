@@ -1789,6 +1789,11 @@ h3 {
   outline: none;
   box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
 }
+.form__input.with-error,
+.form textarea.form__input.with-error,
+.form select.form__input.with-error {
+  border-color: #EF4444;
+}
 .form__error {
   display: none;
   font-size: 0.8rem;

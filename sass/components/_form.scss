@@ -47,6 +47,12 @@
         }
     }
 
+    // ccampos con error
+    &__input.with-error,
+    textarea.form__input.with-error,
+    select.form__input.with-error {
+        border-color: $danger-color;
+    }
 
     // Texto de error debajo del campo
     &__error {

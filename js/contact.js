@@ -3,7 +3,7 @@ const inputsArray = [
     {
         name: "name",
         validation: value => value.trim().length > 2,
-        errorText: "El nombre debe tener al menos 3 letras" 
+        errorText: "El nombre es incorrecto" 
     },
     {
         name: "surname",
