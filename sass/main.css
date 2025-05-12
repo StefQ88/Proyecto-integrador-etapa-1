@@ -1770,7 +1770,7 @@ h3 {
   text-align: left;
   color: #1E40AF;
 }
-.form__label[required]::after {
+.form__label[aria-required=true]::after {
   content: " *";
   color: #EF4444;
 }
@@ -1815,6 +1815,38 @@ h3 {
 }
 .form__submit:hover {
   background-color: #1D4ED8;
+}
+.form__inline-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.form__checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1E40AF;
+  font-size: 1rem;
+}
+.form__checkbox-wrapper span {
+  font-weight: 600;
+  color: #1E40AF;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+.form__checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #F97316;
+  margin: 0;
+}
+.form__file-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 .section-title {
