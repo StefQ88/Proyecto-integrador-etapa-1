@@ -103,7 +103,7 @@ const uploadSubmit = (event) => {
 
 
         if (passedValidation) {
-            // Si pasa la validación, guarda el valor como checked o value
+            // Si pasa la validación, guarda el valor como checked, number o value
 
             if (fieldElement.type === "checkbox") {
                 values[inputName] = fieldElement.checked

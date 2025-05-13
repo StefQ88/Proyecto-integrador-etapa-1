@@ -1,3 +1,10 @@
+.site-wrapper {
+  display: flex; // Estructura vertical
+  flex-direction: column;
+  min-height: 100vh; // Altura completa de pantalla
+  width: 100%;
+}   
+
 .main {
     flex: 1;
     width: 100%;

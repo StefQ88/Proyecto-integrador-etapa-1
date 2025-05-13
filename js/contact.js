@@ -53,6 +53,13 @@ const contactSubmit = (event) => {
 
         const errorElement = document.getElementById(`${inputName}-error`) 
 
+         //si el campo no existe, marca error y continua
+        if (!fieldElement) {
+            console.error(`No se encontró el campo con id: ${inputName}`)
+            isValid = false
+            continue
+        }
+
         if (input.validation(fieldElement.value)) {
             values[inputName] = fieldElement.value 
 

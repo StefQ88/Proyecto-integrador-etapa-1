@@ -12,217 +12,220 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container header__container">
-
-            <!-- IZQUIERDA: Logo + texto -->
-            <div class="header__left">
-                <div class="header__logo">
-                    <a href="../index.html" class="header__logo-link">
-                        <img src="../images/logo.png" alt="Logo Juguetería Cósmica" />
-                    </a>
-                    <div class="header__text">
-                        <h1 class="header__title">Juguetería Cósmica</h1>
-                        <span class="header__slogan">Descubrí tu universo de juegos</span>
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="container header__container">
+    
+                <!-- IZQUIERDA: Logo + texto -->
+                <div class="header__left">
+                    <div class="header__logo">
+                        <a href="../index.html" class="header__logo-link">
+                            <img src="../images/logo.png" alt="Logo Juguetería Cósmica" />
+                        </a>
+                        <div class="header__text">
+                            <h1 class="header__title">Juguetería Cósmica</h1>
+                            <span class="header__slogan">Descubrí tu universo de juegos</span>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <!-- DERECHA: navbar + hamburguesa + lupa-->
+                <div class="header__right">
+                    <nav class="header__navbar">
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-item"><a href="../index.html" class="header__navbar-link">Inicio</a>
+                            </li>
+                            <li class="header__navbar-item"><a href="./about.html" class="header__navbar-link">Nosotros</a></li>
+                            <li class="header__navbar-item"><a href="./contact.html"
+                                    class="header__navbar-link">Contacto</a></li>
+                            <li class="header__navbar-item"><a href="./upload.html" class="header__navbar-link">Alta
+                                    productos</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__actions">
+                        <button class="header__icon header__menu" onclick="handleMenu()">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <button class="header__icon header__search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-
-
-            <!-- DERECHA: navbar + hamburguesa + lupa-->
-            <div class="header__right">
-                <nav class="header__navbar">
-                    <ul class="header__navbar-list">
-                        <li class="header__navbar-item"><a href="../index.html" class="header__navbar-link">Inicio</a>
-                        </li>
-                        <li class="header__navbar-item"><a href="#" class="header__navbar-link">Nosotros</a></li>
-                        <li class="header__navbar-item"><a href="./contact.html"
-                                class="header__navbar-link">Contacto</a></li>
-                        <li class="header__navbar-item"><a href="./upload.html" class="header__navbar-link">Alta
-                                productos</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__actions">
-                    <button class="header__icon header__menu" onclick="handleMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                    <button class="header__icon header__search-button">
+    
+            <div class="search container" id="searchWrapper">
+                <form class="search__form">
+                    <input type="text" class="search__input" placeholder="Buscar productos ..." />
+                    <button type="submit" class="search__button">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="search container" id="searchWrapper">
-            <form class="search__form">
-                <input type="text" class="search__input" placeholder="Buscar productos ..." />
-                <button type="submit" class="search__button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-        </div>
-    </header>
-
-
-    <main class="main contact">
-        <div class="container">
-
-            <div class="contact__wrapper">
-                <h2 class="section-title">Alta de productos</h2>
-
-                <form class="form" id="upload-form">
-
-                    <!-- Nombre del producto -->
-                    <div class="form__group">
-                        <label class="form__label" for="name" aria-required="true">Nombre del producto</label>
-                        <span id="name-error" class="form__error"></span>
-                        <input class="form__input" type="text" name="name" id="name">
-                    </div>
-
-                    <!-- Precio -->
-                    <div class="form__group">
-                        <label class="form__label" for="price" aria-required="true">Precio</label>
-                        <span id="price-error" class="form__error"></span>
-                        <input class="form__input" type="number" name="price" id="price">
-                    </div>
-
-                    <!-- Stock -->
-                    <div class="form__group">
-                        <label class="form__label" for="stock" aria-required="true">Stock</label>
-                        <span id="stock-error" class="form__error"></span>
-                        <input class="form__input" type="number" name="stock" id="stock">
-                    </div>
-
-                    <!-- Marca -->
-                    <div class="form__group">
-                        <label class="form__label" for="brand" aria-required="true">Marca</label>
-                        <span id="brand-error" class="form__error"></span>
-                        <input class="form__input" type="text" name="brand" id="brand">
-                    </div>
-
-                    <!-- Categoría -->
-                    <div class="form__group">
-                        <label class="form__label" for="category" aria-required="true">Categoría</label>
-                        <span id="category-error" class="form__error"></span>
-                        <select class="form__input" name="category" id="category">
-                            <option value="">Seleccionar una opción</option>
-                            <option value="primeros-juguetes">Primeros Juguetes</option>
-                            <option value="vehiculos">Vehiculos</option>
-                            <option value="muñecas- accesorios">Muñecas - Accesorios</option>
-                        </select>
-                    </div>
-
-                    <!-- Descripción Corta -->
-                    <div class="form__group">
-                        <label class="form__label" for="short_description" aria-required="true">Descripción
-                            Corta</label>
-                        <span id="short_description-error" class="form__error"></span>
-                        <textarea class="form__input" name="short_description" id="short_description"></textarea>
-                    </div>
-
-                    <!-- Descripción Larga -->
-                    <div class="form__group">
-                        <label class="form__label" for="large_description">Descripción Larga</label>
-                        <span id="large_description-error" class="form__error"></span>
-                        <textarea class="form__input" name="large_description" id="large_description"></textarea>
-                    </div>
-
-                    <!-- Edad desde -->
-                    <div class="form__group">
-                        <label class="form__label" for="age_from-value" aria-required="true">Edad desde</label>
-                        <span id="age_from-value-error" class="form__error"></span>
-                        <div class="form__inline-group">
-                            <input class="form__input" type="number" name="age_from-value" id="age_from-value" min="0"
-                                >
-                            <select class="form__input" name="age_from-unit" id="age_from-unit">
-                                <option value="">Seleccionar una opción</option>
-                                <option value="meses">meses</option>
-                                <option value="años">años</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Edad hasta -->
-                    <div class="form__group">
-                        <label class="form__label" for="age_to-value" aria-required="true">Edad hasta</label>
-                        <span id="age_to-value-error" class="form__error"></span>
-                        <div class="form__inline-group">
-                            <input class="form__input form__input--small" type="number" name="age_to-value"
-                                id="age_to-value" min="0">
-                            <select class="form__input" name="age_to-unit" id="age_to-unit">
-                                <option value="">Seleccionar una opción</option>
-                                <option value="meses">meses</option>
-                                <option value="años">años</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Envío sin cargo -->
-                    <div class="form__group">
-                        <label class="form__checkbox-wrapper">
-                            <input class="form__checkbox" type="checkbox" name="free_delivery" id="free_delivery">
-                            <span>Envío sin cargo</span>
-                        </label>
-                        <span id="free_delivery-error" class="form__error"></span>
-                    </div>
-
-                    <!-- Imagen -->
-                    <div class="form__group">
-                        <label class="form__label" for="image" aria-required="true">Imagen</label>
-                        <span id="image-error" class="form__error"></span>
-                        <input class="form__input" type="file" name="image" id="image"/>
-                    </div>
-
-                    <!-- Enviar -->
-                    <button type="submit" class="form__submit">
-                        Enviar
-                        <i class="fa-solid fa-paper-plane"></i>
                     </button>
                 </form>
             </div>
-
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer__container">
-
-            <!-- Columna 1 -->
-            <section class="footer__col">
-                <div class="footer__content">
-                    <h4 class="footer__title">Medios de pago</h4>
-                    <span class="footer__text">Tarjetas de débito y crédito</span>
+        </header>
+    
+    
+        <main class="main contact">
+            <div class="container">
+    
+                <div class="contact__wrapper">
+                    <h2 class="section-title">Alta de productos</h2>
+    
+                    <form class="form" id="upload-form">
+    
+                        <!-- Nombre del producto -->
+                        <div class="form__group">
+                            <label class="form__label" for="name" aria-required="true">Nombre del producto</label>
+                            <span id="name-error" class="form__error"></span>
+                            <input class="form__input" type="text" name="name" id="name">
+                        </div>
+    
+                        <!-- Precio -->
+                        <div class="form__group">
+                            <label class="form__label" for="price" aria-required="true">Precio</label>
+                            <span id="price-error" class="form__error"></span>
+                            <input class="form__input" type="number" name="price" id="price">
+                        </div>
+    
+                        <!-- Stock -->
+                        <div class="form__group">
+                            <label class="form__label" for="stock" aria-required="true">Stock</label>
+                            <span id="stock-error" class="form__error"></span>
+                            <input class="form__input" type="number" name="stock" id="stock">
+                        </div>
+    
+                        <!-- Marca -->
+                        <div class="form__group">
+                            <label class="form__label" for="brand" aria-required="true">Marca</label>
+                            <span id="brand-error" class="form__error"></span>
+                            <input class="form__input" type="text" name="brand" id="brand">
+                        </div>
+    
+                        <!-- Categoría -->
+                        <div class="form__group">
+                            <label class="form__label" for="category" aria-required="true">Categoría</label>
+                            <span id="category-error" class="form__error"></span>
+                            <select class="form__input" name="category" id="category">
+                                <option value="">Seleccionar una opción</option>
+                                <option value="primeros-juguetes">Primeros Juguetes</option>
+                                <option value="vehiculos">Vehiculos</option>
+                                <option value="muñecas- accesorios">Muñecas - Accesorios</option>
+                            </select>
+                        </div>
+    
+                        <!-- Descripción Corta -->
+                        <div class="form__group">
+                            <label class="form__label" for="short_description" aria-required="true">Descripción
+                                Corta</label>
+                            <span id="short_description-error" class="form__error"></span>
+                            <textarea class="form__input" name="short_description" id="short_description"></textarea>
+                        </div>
+    
+                        <!-- Descripción Larga -->
+                        <div class="form__group">
+                            <label class="form__label" for="large_description">Descripción Larga</label>
+                            <span id="large_description-error" class="form__error"></span>
+                            <textarea class="form__input" name="large_description" id="large_description"></textarea>
+                        </div>
+    
+                        <!-- Edad desde -->
+                        <div class="form__group">
+                            <label class="form__label" for="age_from-value" aria-required="true">Edad desde</label>
+                            <span id="age_from-value-error" class="form__error"></span>
+                            <div class="form__inline-group">
+                                <input class="form__input" type="number" name="age_from-value" id="age_from-value" min="0"
+                                    >
+                                <select class="form__input" name="age_from-unit" id="age_from-unit">
+                                    <option value="">Seleccionar una opción</option>
+                                    <option value="meses">meses</option>
+                                    <option value="años">años</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Edad hasta -->
+                        <div class="form__group">
+                            <label class="form__label" for="age_to-value" aria-required="true">Edad hasta</label>
+                            <span id="age_to-value-error" class="form__error"></span>
+                            <div class="form__inline-group">
+                                <input class="form__input form__input--small" type="number" name="age_to-value"
+                                    id="age_to-value" min="0">
+                                <select class="form__input" name="age_to-unit" id="age_to-unit">
+                                    <option value="">Seleccionar una opción</option>
+                                    <option value="meses">meses</option>
+                                    <option value="años">años</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Envío sin cargo -->
+                        <div class="form__group">
+                            <label class="form__checkbox-wrapper">
+                                <input class="form__checkbox" type="checkbox" name="free_delivery" id="free_delivery">
+                                <span>Envío sin cargo</span>
+                            </label>
+                            <span id="free_delivery-error" class="form__error"></span>
+                        </div>
+    
+                        <!-- Imagen -->
+                        <div class="form__group">
+                            <label class="form__label" for="image" aria-required="true">Imagen</label>
+                            <span id="image-error" class="form__error"></span>
+                            <input class="form__input" type="file" name="image" id="image"/>
+                        </div>
+    
+                        <!-- Enviar -->
+                        <button type="submit" class="form__submit">
+                            Enviar
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
-            </section>
-
-            <!-- Columna 2 -->
-            <section class="footer__col">
-                <div class="footer__content">
-                    <h4 class="footer__title">Seguínos en:</h4>
-                    <div class="footer__list">
-                        <a href="https://facebook.com" target="_blank" class="footer__icon-link"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="https://instagram.com" target="_blank" class="footer__icon-link"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://youtube.com" target="_blank" class="footer__icon-link"><i
-                                class="fa-brands fa-youtube"></i></a>
+    
+            </div>
+        </main>
+    
+        <footer class="footer">
+            <div class="container footer__container">
+    
+                <!-- Columna 1 -->
+                <section class="footer__col">
+                    <div class="footer__content">
+                        <h4 class="footer__title">Medios de pago</h4>
+                        <span class="footer__text">Tarjetas de débito y crédito</span>
                     </div>
-                </div>
-            </section>
-
-            <!-- Columna 3 -->
-            <section class="footer__col">
-                <div class="footer__content">
-                    <div class="footer__copyright">
-                        <span>Copyright 2025 ©</span>
-                        <span>Juguetería Cósmica</span>
+                </section>
+    
+                <!-- Columna 2 -->
+                <section class="footer__col">
+                    <div class="footer__content">
+                        <h4 class="footer__title">Seguínos en:</h4>
+                        <div class="footer__list">
+                            <a href="https://facebook.com" target="_blank" class="footer__icon-link"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://instagram.com" target="_blank" class="footer__icon-link"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://youtube.com" target="_blank" class="footer__icon-link"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+    
+                <!-- Columna 3 -->
+                <section class="footer__col">
+                    <div class="footer__content">
+                        <div class="footer__copyright">
+                            <span>Copyright 2025 ©</span>
+                            <span>Juguetería Cósmica</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    
+        </footer>
 
-    </footer>
+    </div>
 
     <script src="../js/index.js" defer></script>
     <script src="../js/upload.js" defer></script>
