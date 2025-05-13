@@ -1775,7 +1775,7 @@ h3 {
   text-align: left;
   color: #1E40AF;
 }
-.form__label[aria-required=true]::after {
+.form__label.is-required::after {
   content: " *";
   color: #EF4444;
 }

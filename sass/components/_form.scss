@@ -21,7 +21,7 @@
         text-align: left;
         color: $primary-color;
 
-        &[aria-required="true"]::after {
+        &.is-required::after {
             content: " *";
             color: $danger-color;
         }

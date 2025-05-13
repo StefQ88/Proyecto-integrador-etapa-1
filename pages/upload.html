@@ -21,7 +21,7 @@
                 <div class="header__left">
                     <div class="header__logo">
                         <a href="../index.html" class="header__logo-link">
-                            <img src="../images/logo.png" alt="Logo Juguetería Cósmica" />
+                            <img src="../images/logo.png" alt="Logo Juguetería Cósmica">
                         </a>
                         <div class="header__text">
                             <h1 class="header__title">Juguetería Cósmica</h1>
@@ -40,9 +40,9 @@
                             </li>
                             <li class="header__navbar-item"><a href="./upload.html" class="header__navbar-link">Alta
                                     productos</a>
+                            </li>
                             <li class="header__navbar-item"><a href="./contact.html"
                                     class="header__navbar-link">Contacto</a></li>
-                            </li>
                             <li class="header__navbar-item"><a href="./about.html"
                                     class="header__navbar-link">Nosotros</a></li>
                         </ul>
@@ -60,7 +60,7 @@
 
             <div class="search container" id="searchWrapper">
                 <form class="search__form">
-                    <input type="text" class="search__input" placeholder="Buscar productos ..." />
+                    <input type="text" class="search__input" placeholder="Buscar productos ...">
                     <button type="submit" class="search__button">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -91,35 +91,35 @@
 
                         <!-- Nombre del producto -->
                         <div class="form__group">
-                            <label class="form__label" for="name" aria-required="true">Nombre del producto</label>
+                            <label class="form__label is-required" for="name" >Nombre del producto </label>
                             <span id="name-error" class="form__error"></span>
                             <input class="form__input" type="text" name="name" id="name">
                         </div>
 
                         <!-- Precio -->
                         <div class="form__group">
-                            <label class="form__label" for="price" aria-required="true">Precio</label>
+                            <label class="form__label is-required" for="price" >Precio</label>
                             <span id="price-error" class="form__error"></span>
                             <input class="form__input" type="number" name="price" id="price">
                         </div>
 
                         <!-- Stock -->
                         <div class="form__group">
-                            <label class="form__label" for="stock" aria-required="true">Stock</label>
+                            <label class="form__label is-required" for="stock" >Stock</label>
                             <span id="stock-error" class="form__error"></span>
                             <input class="form__input" type="number" name="stock" id="stock">
                         </div>
 
                         <!-- Marca -->
                         <div class="form__group">
-                            <label class="form__label" for="brand" aria-required="true">Marca</label>
+                            <label class="form__label is-required" for="brand" >Marca</label>
                             <span id="brand-error" class="form__error"></span>
                             <input class="form__input" type="text" name="brand" id="brand">
                         </div>
 
                         <!-- Categoría -->
                         <div class="form__group">
-                            <label class="form__label" for="category" aria-required="true">Categoría</label>
+                            <label class="form__label is-required" for="category" >Categoría</label>
                             <span id="category-error" class="form__error"></span>
                             <select class="form__input" name="category" id="category">
                                 <option value="">Seleccionar una opción</option>
@@ -131,7 +131,7 @@
 
                         <!-- Descripción Corta -->
                         <div class="form__group">
-                            <label class="form__label" for="short_description" aria-required="true">Descripción
+                            <label class="form__label is-required" for="short_description" >Descripción
                                 Corta</label>
                             <span id="short_description-error" class="form__error"></span>
                             <textarea class="form__input" name="short_description" id="short_description"></textarea>
@@ -146,7 +146,7 @@
 
                         <!-- Edad desde -->
                         <div class="form__group">
-                            <label class="form__label" for="age_from-value" aria-required="true">Edad desde</label>
+                            <label class="form__label  is-required" for="age_from-value">Edad desde</label>
                             <span id="age_from-value-error" class="form__error"></span>
                             <div class="form__inline-group">
                                 <input class="form__input" type="number" name="age_from-value" id="age_from-value"
@@ -161,7 +161,7 @@
 
                         <!-- Edad hasta -->
                         <div class="form__group">
-                            <label class="form__label" for="age_to-value" aria-required="true">Edad hasta</label>
+                            <label class="form__label is-required" for="age_to-value" >Edad hasta</label>
                             <span id="age_to-value-error" class="form__error"></span>
                             <div class="form__inline-group">
                                 <input class="form__input form__input--small" type="number" name="age_to-value"
@@ -185,7 +185,7 @@
 
                         <!-- Imagen -->
                         <div class="form__group">
-                            <label class="form__label" for="image" aria-required="true">Imagen</label>
+                            <label class="form__label  is-required" for="image">Imagen</label>
                             <span id="image-error" class="form__error"></span>
                             <input class="form__input" type="file" name="image" id="image" />
                         </div>
@@ -203,17 +203,16 @@
 
         <footer class="footer">
             <div class="container footer__container">
-
                 <!-- Columna 1 -->
-                <section class="footer__col">
+                <div class="footer__col">
                     <div class="footer__content">
                         <h4 class="footer__title">Medios de pago</h4>
                         <span class="footer__text">Tarjetas de débito y crédito</span>
                     </div>
-                </section>
+                </div>
 
                 <!-- Columna 2 -->
-                <section class="footer__col">
+                <div class="footer__col">
                     <div class="footer__content">
                         <h4 class="footer__title">Seguínos en:</h4>
                         <div class="footer__list">
@@ -225,17 +224,17 @@
                                     class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- Columna 3 -->
-                <section class="footer__col">
+                <div class="footer__col">
                     <div class="footer__content">
                         <div class="footer__copyright">
                             <span>Copyright 2025 ©</span>
                             <span>Juguetería Cósmica</span>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
 
         </footer>
