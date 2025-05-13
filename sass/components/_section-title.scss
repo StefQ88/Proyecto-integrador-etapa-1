@@ -32,7 +32,7 @@
 
 }
 
-.title-about {
+.subtitle {
     font-size: 2rem;
     font-family: $font-auxiliary;
     color: $primary-color;
@@ -43,7 +43,7 @@
 
     // Pantallas md en adelante
     @media screen and (min-width: map-get($grid-breakpoints, md)){
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     }
 
      // Pantallas lg en adelante
@@ -73,3 +73,4 @@
     }
 
 }
+

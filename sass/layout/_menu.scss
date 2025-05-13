@@ -4,26 +4,28 @@
     &-visible {
         display: block;
         position: fixed;
-        top: 12; 
+        top: 0;
         left: 0;
-        width: 52%;
+        width: 40%; 
+        height: 100%; 
         background-color: $color-white;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         padding: 1.5rem 1.2rem;
-        z-index: 1;
+        z-index: 1100;
         overflow-y: auto;
+    
 
         @media screen and (min-width: map-get($grid-breakpoints, md)) {
             display: none;
         }
 
         .menu__title {
-            font-size: 1.4rem;
+            font-size: 1.7rem;
             font-weight: bold;
-            color: $color-gray-dark;
+            color: $primary-color;
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
-            border-bottom: 1px solid $color-gray-light;
+            border-bottom: 2px solid $color-gray-medium;
         }
 
         .menu__navigation {
@@ -42,12 +44,8 @@
 
                     &:hover {
                         color: $secondary-color;
-                        background-color: rgba($secondary-color, 0.05);
                     }
 
-                    &:visited {
-                        color: $color-primary-light;
-                    }
                 }
             }
         }

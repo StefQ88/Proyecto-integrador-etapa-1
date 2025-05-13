@@ -1402,6 +1402,7 @@ h3 {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .main {
@@ -1410,24 +1411,26 @@ h3 {
   margin: 0 auto;
   box-sizing: border-box;
   min-width: 360px;
-  margin-top: 0;
-  padding-top: 13.5rem;
+  padding-top: 15rem;
   padding-bottom: 3rem;
 }
 @media screen and (min-width: 576px) {
   .main {
     padding-top: 10rem;
+    margin-top: 1rem;
   }
 }
 @media screen and (min-width: 768px) {
   .main {
     padding-top: 9.5rem;
+    margin-top: 1rem;
   }
 }
 @media screen and (min-width: 992px) {
   .main {
     padding-top: 9.5rem;
     max-width: 1320px;
+    margin-top: 1rem;
   }
 }
 
@@ -1437,13 +1440,14 @@ h3 {
 .menu__container-visible {
   display: block;
   position: fixed;
-  top: 12;
+  top: 0;
   left: 0;
-  width: 52%;
+  width: 40%;
+  height: 100%;
   background-color: #FFFFFF;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem 1.2rem;
-  z-index: 1;
+  z-index: 1100;
   overflow-y: auto;
 }
 @media screen and (min-width: 768px) {
@@ -1452,12 +1456,12 @@ h3 {
   }
 }
 .menu__container-visible .menu__title {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  color: #111827;
+  color: #1E40AF;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #F3F4F6;
+  border-bottom: 2px solid #D1D5DB;
 }
 .menu__container-visible .menu__navigation ul.menu__list {
   list-style: none;
@@ -1474,10 +1478,6 @@ h3 {
 }
 .menu__container-visible .menu__navigation ul.menu__list li.menu__item a:hover {
   color: #F97316;
-  background-color: rgba(249, 115, 22, 0.05);
-}
-.menu__container-visible .menu__navigation ul.menu__list li.menu__item a:visited {
-  color: #93C5FD;
 }
 
 .footer {
@@ -1631,24 +1631,25 @@ h3 {
   display: block;
 }
 .card__content {
-  padding: 1rem;
+  padding: 2.5rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 .card__header {
+  height: 60px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 0.2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 .card__title {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.1rem;
   color: #1E40AF;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1.2;
   word-break: break-word;
 }
@@ -1690,7 +1691,7 @@ h3 {
   width: 100%;
   height: 100%;
   text-align: center;
-  margin-top: 1rem;
+  padding-block: 2rem;
 }
 .banner-card__image {
   position: relative;
@@ -1698,6 +1699,7 @@ h3 {
   height: 320px;
   overflow: hidden;
   border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 .banner-card__image img {
   width: 100%;
@@ -1724,37 +1726,30 @@ h3 {
   margin: 0.2rem 0;
 }
 .banner-card--center {
-  background-color: transparent;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  box-shadow: none;
-}
-.banner-card__title {
-  font-size: 2.4rem;
-  font-family: "Nunito", sans-serif;
-  color: #1D4ED8;
-  margin-bottom: 1rem;
 }
 .banner-card__intro {
   font-style: italic;
+  font-family: "Nunito", sans-serif;
   color: #1E40AF;
   font-size: 1.1rem;
   text-transform: lowercase;
 }
 .banner-card__select {
   font-weight: bold;
+  font-family: "Rubik", sans-serif;
   color: #F97316;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-transform: lowercase;
 }
 
 .star-line {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #FACC15;
   letter-spacing: 0.5rem;
   margin: 2rem 0;
@@ -1909,7 +1904,7 @@ h3 {
   }
 }
 
-.title-about {
+.subtitle {
   font-size: 2rem;
   font-family: "Neucha", cursive;
   color: #1E40AF;
@@ -1918,12 +1913,12 @@ h3 {
   padding-bottom: 0.5rem;
 }
 @media screen and (min-width: 768px) {
-  .title-about {
-    font-size: 2.5rem;
+  .subtitle {
+    font-size: 2.7rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .title-about {
+  .subtitle {
     font-size: 3.5rem;
   }
 }
@@ -1952,14 +1947,9 @@ h3 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
   max-width: 480px;
   margin: 0 auto;
-}
-@media screen and (max-width: 576px) {
-  .contact__wrapper {
-    padding: 1.2rem 1rem;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .contact__wrapper {
@@ -1973,7 +1963,7 @@ h3 {
 }
 
 .about {
-  padding-block: 3rem;
+  padding-block: 1rem;
 }
 .about .about__item {
   padding: 1rem;

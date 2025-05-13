@@ -1,8 +1,9 @@
 .site-wrapper {
-    display: flex; // Estructura vertical
+    display: flex; 
     flex-direction: column;
-    min-height: 100vh; // Altura completa de pantalla
+    min-height: 100vh; 
     width: 100%;
+    margin-top: 1rem;
 }
 
 .main {
@@ -11,21 +12,24 @@
     margin: 0 auto;
     box-sizing: border-box;
     min-width: 360px;
-    margin-top: 0;
 
-    padding-top: 13.5rem;
+    padding-top: 15rem;
     padding-bottom: 3rem;
 
     @media screen and (min-width: map-get($grid-breakpoints, sm)) {
         padding-top: 10rem; // tablet
+        margin-top: 1rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, md)) {
         padding-top: 9.5rem; // desktop
+        margin-top: 1rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, lg)) {
         padding-top: 9.5rem; // desktop grande
         max-width: map-get($grid-width, xxl);
+        margin-top: 1rem;
+
     }
 }

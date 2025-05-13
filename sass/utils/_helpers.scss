@@ -1,5 +1,4 @@
 
-
 // Utilities: Espaciado
 // Genera clases como .p-3 usando el mapa $spacings
 @each $prefix, $property in $spacings {
@@ -10,11 +9,9 @@
     }
 }
 
-// Clases utilitarias para ocultar elementos en funcion del brakpoint
-// Usa los breakpoints definidos en $grid-breakpoints
+// oculta elementos en funcion del brakpoint
 @each $bp, $value in $grid-breakpoints {
     .hide-below-#{$bp} {
-      @include hide-below($bp); // <- FALTA ESTE ;
+        @include hide-below($bp);
     }
 }
-
