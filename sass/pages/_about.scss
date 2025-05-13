@@ -1,0 +1,24 @@
+.about {
+    padding-block: 3rem;
+
+    .about__item {
+        padding: 1rem;
+    }
+
+    .about__text {
+        font-size: 1rem;
+        line-height: 1.6;
+
+        &:not(:last-of-type) {
+            margin-bottom: 1rem; 
+        }
+    }
+
+
+
+    .about__image {
+        width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+}

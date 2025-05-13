@@ -2,11 +2,11 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juguetería Cósmica - Sobre nosotros</title>
-    <link rel="stylesheet" href="../sass/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../sass/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
         <header class="header">
             <div class="container header__container">
-    
+
                 <!-- IZQUIERDA: Logo + texto -->
                 <div class="header__left">
                     <div class="header__logo">
@@ -27,20 +27,22 @@
                         </div>
                     </div>
                 </div>
-    
-    
+
+
                 <!-- DERECHA: navbar + hamburguesa + lupa-->
                 <div class="header__right">
                     <nav class="header__navbar">
                         <ul class="header__navbar-list">
-                            <li class="header__navbar-item"><a href="../index.html" class="header__navbar-link">Inicio</a>
+                            <li class="header__navbar-item"><a href="../index.html"
+                                    class="header__navbar-link">Inicio</a>
                             </li>
-                            <li class="header__navbar-item"><a href="#" class="header__navbar-link">Nosotros</a></li>
-                            <li class="header__navbar-item"><a href="./contact.html"
-                                    class="header__navbar-link">Contacto</a></li>
                             <li class="header__navbar-item"><a href="./upload.html" class="header__navbar-link">Alta
                                     productos</a>
+                            <li class="header__navbar-item"><a href="./contact.html"
+                                    class="header__navbar-link">Contacto</a></li>
                             </li>
+                            <li class="header__navbar-item"><a href="./about.html"
+                                    class="header__navbar-link">Nosotros</a></li>
                         </ul>
                     </nav>
                     <div class="header__actions">
@@ -53,7 +55,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="search container" id="searchWrapper">
                 <form class="search__form">
                     <input type="text" class="search__input" placeholder="Buscar productos ..." />
@@ -63,23 +65,82 @@
                 </form>
             </div>
         </header>
-    
-        <main class="main contact">
+
+        <main class="main">
             <div class="container">
-                <div class="contact__wrapper">
-                    <h2 class="section-title">Quiénes Somos</h2>
-                    <p>Desde el corazón de la infancia, creamos momentos mágicos con cada juguete.</p>
-                </div>
+                <section class="about">
+                    <h2 class="title-about">Sobre nosotros ...</h2>
+
+                    <!-- Fila 1 -->
+                    <div class="grid">
+                        <div class="col-12 col-md-6 about__item">
+                            <h3 class="title-section">Nuestra Historia</h3>
+                            <p class="about__text">
+                                Juguetería Cósmica comenzó como un proyecto familiar apasionado por el juego como
+                                derecho. Lo que nació en un pequeño local de barrio fue creciendo gracias
+                                a la confianza de las familias que buscan algo más que un simple juguete: buscan
+                                experiencias.
+                            </p>
+                            <p class="about__text">
+                                A lo largo de los años, nos transformamos en un espacio referente en el universo
+                                infantil, donde cada producto cuenta una historia y cada cliente se convierte en parte
+                                de la nuestra. Nos impulsa una convicción: que jugar es aprender, compartir, imaginar...
+                                y crecer.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6 about__item">
+                            <img src="../images/about-historia.jpg" alt="Niños jugando" class="about__image" />
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 -->
+                    <div class="grid">
+                        <div class="col-12 col-md-6 about__item">
+                            <img src="../images/about-espacio.jpg" alt="Interior de la tienda" class="about__image" />
+                        </div>
+                        <div class="col-12 col-md-6 about__item">
+                            <h3 class="title-section">Nuestro espacio</h3>
+                            <p class="about__text">
+                                Contamos con una tienda mágica y didáctica, pensada para que cada visita sea una
+                                experiencia inolvidable para chicos y grandes.
+                            </p>
+                            <p class="about__text">
+                                Desde estanterías al alcance de los más pequeños hasta zonas interactivas para probar
+                                juguetes, creamos un ambiente que invita a explorar con los sentidos y el corazón.
+                                Queremos que cada visita se convierta en una experiencia única.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 -->
+                    <div class="grid">
+                        <div class="col-12 col-md-6 about__item">
+                            <h3 class="title-section">Nuestro compromiso</h3>
+                            <p class="about__text">
+                                Detrás de cada propuesta de Juguetería Cósmica hay un equipo apasionado por el
+                                desarrollo infantil y el poder del juego. Nuestro personal está formado por educadores,
+                                artistas y especialistas en infancia que trabajan con dedicación y sensibilidad.
+                            </p>
+                            <p class="about__text">
+                                Nos esforzamos por brindar una atención cercana, respetuosa y creativa, acompañando a
+                                cada familia en la elección de juguetes que enriquezcan la imaginación y fortalezcan los
+                                vínculos. Creemos que cada interacción es una oportunidad para sembrar curiosidad y
+                                alegría.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6 about__item">
+                            <img src="../images/about-compromiso.jpg" alt="Compromiso con los valores"
+                                class="about__image" />
+                        </div>
+                    </div>
+
+                </section>
+
             </div>
-    
-    
         </main>
-    
-    
-    
+
         <footer class="footer">
             <div class="container footer__container">
-    
                 <!-- Columna 1 -->
                 <section class="footer__col">
                     <div class="footer__content">
@@ -87,7 +148,7 @@
                         <span class="footer__text">Tarjetas de débito y crédito</span>
                     </div>
                 </section>
-    
+
                 <!-- Columna 2 -->
                 <section class="footer__col">
                     <div class="footer__content">
@@ -102,7 +163,7 @@
                         </div>
                     </div>
                 </section>
-    
+
                 <!-- Columna 3 -->
                 <section class="footer__col">
                     <div class="footer__content">
@@ -113,8 +174,8 @@
                     </div>
                 </section>
             </div>
-    
         </footer>
+
     </div>
 </body>
 
