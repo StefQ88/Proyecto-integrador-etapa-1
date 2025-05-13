@@ -20,6 +20,7 @@
         font-size: 1rem;
         text-align: left;
         color: $primary-color;
+        font-family: $font-primary;
 
         &.is-required::after {
             content: " *";
@@ -37,6 +38,7 @@
         font-size: 1rem;
         color: $color-gray-dark;
         box-sizing: border-box;
+        font-family: $font-secondary;
 
 
         // Estado activo o enfocado

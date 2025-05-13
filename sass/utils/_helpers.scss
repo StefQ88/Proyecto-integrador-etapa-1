@@ -1,6 +1,5 @@
 
 // Utilities: Espaciado
-// Genera clases como .p-3 usando el mapa $spacings
 @each $prefix, $property in $spacings {
     @for $i from 0 through 12 {
         .#{$prefix}-#{$i} {

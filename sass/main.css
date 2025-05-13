@@ -1774,6 +1774,7 @@ h3 {
   font-size: 1rem;
   text-align: left;
   color: #1E40AF;
+  font-family: "Inter", sans-serif;
 }
 .form__label.is-required::after {
   content: " *";
@@ -1788,6 +1789,7 @@ h3 {
   font-size: 1rem;
   color: #111827;
   box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 .form__input:focus, .form__select:focus {
   border-color: #F97316;
@@ -1876,7 +1878,7 @@ h3 {
 
 .title-form {
   font-size: 2rem;
-  font-family: "Rubik", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #1E40AF;
   text-align: right;
   margin-bottom: 0.5rem;

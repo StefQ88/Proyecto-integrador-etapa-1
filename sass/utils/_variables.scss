@@ -1,6 +1,5 @@
-// ==============================
+
 // BREAKPOINTS
-// ==============================
 
 $grid-breakpoints: (
     xs: 0,
@@ -24,9 +23,7 @@ $grid-width: (
 $hide-sm-max: 768px;
 
 
-// ==============================
 // COLOR PALETTE
-// ==============================
 
 $color-primary: #1E40AF; 
 $color-primary-hover: #1D4ED8; 
@@ -43,7 +40,7 @@ $color-tertiary-light: #FEF9C3;
 $color-danger: #EF4444; 
 $color-danger-hover: #DC2626; 
 
-$color-success: #22C55E; // Confirmaciones, stock disponible, validación
+$color-success: #22C55E; 
 
 $color-white: #FFFFFF; // Fondo general
 $color-gray-light: #F3F4F6; // Fondo alternativo, tarjetas
@@ -57,9 +54,9 @@ $success-color: $color-success;
 $warning-color: $color-tertiary;  
 $danger-color: $color-danger;
 
-// ==============================
+
 // LAYOUT / GENERAL
-// ==============================
+
 $body-bg-color: $color-white;
 $header-bg-color: $color-primary;
 $footer-bg-color: $color-primary;
@@ -68,9 +65,9 @@ $grid-gap: 2rem;
 
 $card-min-width: 280px;
 
-// ==============================
+
 // FUENTES
-// ==============================
+
 $font-primary: "Inter", sans-serif;
 $font-secondary: "Nunito", sans-serif;
 $font-tertiary: "Rubik", sans-serif;
@@ -78,9 +75,9 @@ $font-auxiliary: "Neucha", cursive;
 
 
 
-// ==============================
+
 // SPACINGS
-// ==============================
+
 $spacings: (
     m: margin,
     mt: margin-top,
